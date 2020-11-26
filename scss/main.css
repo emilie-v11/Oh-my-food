@@ -1,0 +1,231 @@
+@charset "UTF-8";
+/* Reduire les répetitions de
+font-size: 1rem;
+*/
+/* Faire une extension avec les 
+padding-left des h2
+*/
+.p-l-h2, .site-operation h2, .selection h2 {
+  padding-left: 1.2rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+header {
+  padding: 1.5rem 1.3rem;
+  padding-bottom: 10px;
+  -webkit-box-shadow: #d9d9d9 16px 8px 20px -12px;
+          box-shadow: #d9d9d9 16px 8px 20px -12px;
+  text-align: center;
+}
+
+header img.header__brand-logo {
+  width: 52%;
+}
+
+div.location {
+  width: 100%;
+  text-align: center;
+  background-color: #EAEAEA;
+  padding: 1px;
+}
+
+div.location__paragraph {
+  margin: 10px;
+}
+
+div.location i {
+  padding-right: 15px;
+}
+
+.presentation {
+  padding: 1.5rem 1.3rem;
+  text-align: center;
+  background-color: #F6F6F6;
+}
+
+.presentation h1 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.presentation p {
+  font-weight: lighter;
+  font-size: 1.1rem;
+}
+
+.presentation button {
+  border: 1px solid transparent;
+  border-radius: 25px;
+  padding: 15px;
+  width: 220px;
+  color: #FFFFFF;
+  font-size: 1rem;
+  background-color: #FF79DA;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+div.site-operation__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+div.site-operation__buttons button {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 88%;
+  height: 72px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #F6F6F6;
+  border: 1px solid #F6F6F6;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: #d9d9d9 16px 8px 20px -12px;
+          box-shadow: #d9d9d9 16px 8px 20px -12px;
+  font-size: 1rem;
+}
+
+div.site-operation__buttons button:hover {
+  background-color: rgba(146, 86, 220, 0.12);
+}
+
+div.site-operation__buttons button .fas:hover {
+  color: #9356DC;
+}
+
+div.site-operation__buttons button span {
+  position: absolute;
+  left: -10PX;
+  top: 25px;
+  border-radius: 50%;
+  border: 1px solid #9356DC;
+  padding: 4px 8px;
+  background-color: #9356DC;
+  font-size: 0.8rem;
+  color: #FFFFFF;
+}
+
+div.site-operation__buttons button i {
+  margin: 0 1.5rem 0 .7rem;
+  color: #7e7e7e;
+  font-size: 1.2rem;
+  padding-left: 20px;
+}
+
+.restaurant {
+  padding: 1.5rem 1.3rem;
+}
+
+.restaurant a {
+  z-index: 1;
+}
+
+.restaurant a .restaurant__card {
+  width: auto;
+  height: 300px;
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.restaurant a .restaurant__card__img {
+  width: 100%;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  z-index: 1;
+}
+
+.restaurant a .restaurant__card .restaurant__card__description {
+  border: 1px solid #F6F6F6 #000000;
+  border-radius: 20px;
+}
+
+.restaurant a .restaurant__card span.new {
+  position: absolute;
+  z-index: 2;
+  border: 1px solid #99E2D0;
+  background-color: #99E2D0;
+  top: 20px;
+  right: 20px;
+  padding: 5px 10px;
+  border-radius: 2px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #2c9c81;
+}
+
+footer {
+  background-color: #353535;
+  color: #FFFFFF;
+  padding: 1.5rem 1.3rem;
+}
+
+footer p {
+  margin-top: 0;
+}
+
+footer .logo-title {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.1rem;
+}
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+  margin: 0;
+}
+
+ul.proposal-links {
+  margin-bottom: 0;
+}
+
+ul li {
+  padding-bottom: 8px;
+  font-size: 1rem;
+}
+
+ul i {
+  padding-right: 10px;
+}
+
+ul.useful-links {
+  margin-top: 0;
+}
+
+.fas.fa-hands-helping {
+  font-size: 0.7rem;
+}
+/*# sourceMappingURL=main.css.map */
