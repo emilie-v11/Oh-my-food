@@ -12,18 +12,18 @@
   Avec notre application, réservez dans un de nos restaurants gastronomiques, composez votre menus,
   et vos plats seront prêts à votre arrivée !">
 
-  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/logo/circle-favicon-32x32.png">
+  <link rel="icon" href="img/logo/circle-favicon-32x32.png" type="image/png" sizes="32x32">
   <!-- <link rel="shortcut icon" href="img/logo/ohmyfood.png" type="image/x-icon"> -->
 
-  <link rel="stylesheet" href="scss/main.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
   <header class="header">
-    <!--link logo-->
+    <!--link logo-->  <!--TODO enlever le lien <a> du logo img sur les 5 pages-->
     <a id="logo-title" href="#logo-title">
       <img class="header__brand-logo" src="img/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
     </a>
@@ -38,7 +38,7 @@
     <section class="container presentation">
         <h1>Réservez le menu qui vous convient</h1>
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <button>Explorer nos restaurants</button>
+        <button><a href="#restaurants">Explorer nos restaurants</a></button>
     </section>
 
     <section class="container site-operation">
@@ -55,7 +55,7 @@
 
     <section class="container selection">
       <!--section title-->
-      <h2 class="selection__title">Restaurants</h2>
+      <h2 class="selection__title" id="restaurants">Restaurants</h2>
 
       <div class="restaurant">
 
@@ -139,7 +139,6 @@
         <li class="contact"><a href="mailto:contact@ohmyfood.com">Contact</a></li>
       </ul>
     </nav>
- 
   </footer>
 
 </body>
