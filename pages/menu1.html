@@ -15,10 +15,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-  <link rel="icon" href="img/logo/circle-favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="../img/logo/circle-favicon-32x32.png" type="image/png" sizes="32x32">
   <!-- <link rel="shortcut icon" href="img/logo/ohmyfood.png" type="image/x-icon"> -->
 
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
@@ -34,27 +34,101 @@
 
     <main>
 
+        <div class="banner">
+            <img class="banner__img" src="/img/restaurants/small/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+        </div>
+
+        <section class="menu">
+            <div class="menu__bloc">
+            <h1 class="menu__bloc--heading">La palette du goût</h1>
+            <p><i class="far fa-heart"></i></p>
+            </div>
+
+            
+            <h2 class="menu__starter">Entrées</h2>
+            <div>
+                <div class="menu__starter__list">
+                    <div class="operation__list--item">
+                        <p>Fricassée d'escargot</p>
+                        <p>Au piment d'espelette</p>
+                    </div>
+                    <div class="operation__list--item">
+                        <h3>Fricassée d'escargot</h3>
+                        <p>Au piment d'espelette</p>
+                    </div>
+                    <div class="operation__list--item">
+                        <h3>Fricassée d'escargot</h3>
+                        <p>Au piment d'espelette</p>
+                    </div>
+                </div>
+            </div>
 
 
+            <h2 class="menu__starter">Plats</h2>
+            <div>
+                <div class="menu__starter__list">
+                    <div class="operation__list--item">
+                        <p>Fricassée d'escargot</p>
+                        <p>Au piment d'espelette</p>
+                    </div>
+                    <div class="operation__list--item">
+                        <h3>Fricassée d'escargot</h3>
+                        <p>Au piment d'espelette</p>
+                    </div>
+                    <div class="operation__list--item">
+                        <h3>Fricassée d'escargot</h3>
+                        <p>Au piment d'espelette</p>
+                    </div>
+                </div>
+            </div>
 
+            <h2 class="menu__starter">Desserts</h2>
+            <div>
+                <div class="menu__starter__list">
+                    <div class="operation__list--item">
+                        <h3>Fricassée d'escargot</h3>
+                        <p>Au piment d'espelette</p>
+                    </div>
+                    <div class="operation__list--item">
+                        <h3>Fricassée d'escargot</h3>
+                        <p>Au piment d'espelette</p>
+                    </div>
+                    <div class="operation__list--item">
+                        <h3>Fricassée d'escargot</h3>
+                        <p>Au piment d'espelette</p>
+                    </div>
+                </div>
+            </div>
+
+
+        <!-- button order -->
+        <form action="">
+            <button class="order__button" type="submit">Commander</button>
+          </form>
+
+        </section>
     </main>
 
     <footer>
         <!--* for "ohmyfood" logo-img=header ? <p> ? <h2> ? what the best ?-->
-        <p><a class="logo-title" href="#logo-title">ohmyfood</a></p>
         <!--Nav-footer-->
-        <nav>
-            <!--TODO vérifier si BP div ds ul + renommer les class des div et li-->
-            <ul class="proposal-links">
-                <li class="suggestion"><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
-                <li class="Partnership"><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
-            </ul>
-            <ul class="useful-links">
-            <li class="legal-notices"><a href="#">Mentions légales</a></li>
-            <li class="contact"><a href="mailto:contact@ohmyfood.com">Contact</a></li>
-            </ul>
+        <nav class="footer-nav">
+          <!-- logo-title -->
+          <div class="footer-nav__logo">
+            <a href="#logo-title">ohmyfood</a>
+          </div>
+          <ul class="footer-nav__links proposal">
+            <li class="footer-nav__links--item suggestion"><a href="#"><i class="fas fa-utensils"></i>Proposer un
+                restaurant</a></li>
+            <li class="footer-nav__links--item Partnership"><a href="#"><i class="fas fa-hands-helping"></i>Devenir
+                partenaire</a></li>
+          </ul>
+          <ul class="footer-nav__links useful">
+            <li class="footer-nav__links--item legal-notices"><a href="#">Mentions légales</a></li>
+            <li class="footer-nav__links--item contact"><a href="mailto:contact@ohmyfood.com">Contact</a></li>
+          </ul>
         </nav>
-    </footer>
+      </footer>
     
 </body>
 </html>

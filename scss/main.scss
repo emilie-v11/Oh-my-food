@@ -5,10 +5,24 @@
 $font-logo-title: 'Shrikhand', cursive;
 $font-text: 'Roboto', sans-serif;
 
+// Variables colors
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+
+$color-light-gray: #F6F6F6;
+$color-gray: #EAEAEA;
+$color-shadow-gray: #d9d9d9;
+
+$color-white: #FFFFFF;
+$color-bg-footer: #353535;
+$color-dark-text: #000000;
+
+$color-shadow-header: #CFCFCF;
 
 //Mixins
 @mixin padding-bloc {
-    padding: 1.5rem 1.3rem;
+    padding: 1.3rem 1.3rem;
 }
 @mixin padding-element {
     padding-left: 10px;
@@ -18,9 +32,24 @@ $font-text: 'Roboto', sans-serif;
         text-decoration: none;
         padding: 0;
 }
-@mixin box-shadow {
-    box-shadow: $color-shadow-gray 16px 8px 20px -12px;
+@mixin reset-list {
+    padding-left: 0;
+    list-style-type: none;
+    margin: 0;
 }
+
+@mixin box-shadow {
+    box-shadow: $color-shadow-gray 0px 5px 5px 0px;
+}
+@mixin header-shadow {
+    box-shadow: $color-shadow-header 0px 3px 5px 0px;
+}
+
+@mixin auto-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @mixin center-icon {
     display: flex;
     align-items: center;
@@ -35,7 +64,16 @@ $font-text: 'Roboto', sans-serif;
     font-size: 1.2rem;
 }
 
-
+@mixin button {
+    border: none;
+    border-radius: 25px;
+    padding: 15px;
+    color: $color-white;
+    font-size: 1rem;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    background: linear-gradient($color-secondary, $color-primary);
+}
 /* Reduire les répetitions de
 font-size: 1rem;
 */
@@ -46,6 +84,33 @@ padding-left des h2
 //Extensions
 .p-l-h2 {
     padding-left: 1.2rem;
+}
+
+.bloc-list {
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 25px;
+}
+
+.bloc-list-item {
+    position: relative;
+    display: flex;
+    // justify-content: start;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    height: 70px;
+    @include auto-center;
+    background-color: $color-light-gray;
+    @include border($color-light-gray);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    @include box-shadow;
+    font-size: 1rem;
 }
 
 
@@ -68,24 +133,28 @@ a {
 
 header {
     @include padding-bloc;
-    padding-bottom: 10px;
-    @include box-shadow;
+    padding-bottom: 5px;
+    @include header-shadow;
     text-align: center;
+    position: relative;
         img.header__brand-logo {
             width: 52%;
         }
 }
 
-div.location {
+.search {
     width: 100%;
     text-align: center;
     background-color: $color-gray;
-    padding: 1px;
-    &__paragraph {
+    padding: 6px;
+    &__input {
         margin: 10px;
-    }
-    & i {
-        padding-right: 15px;
+        border: none;
+        background-color: #EAEAEA;
+        &::placeholder {
+            color: $color-dark-text;
+            font-size: 1rem;
+        }
     }
 }
 
@@ -93,58 +162,47 @@ div.location {
     @include padding-bloc;
     text-align: center;
     background-color: $color-light-gray;
-    & h1 {
+    &__heading {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
     }
-    & p {
+    &__paragraph {
         font-weight: lighter;
         font-size: 1.1rem;
     }
-    & button {
-        @include border(transparent);
-        border-radius: 25px;
-        padding: 15px;
+    &__button {
         width: 220px;
-        color: $color-white;
-        font-size: 1rem;
-        background-color: $color-secondary;
-        margin-top: 15px;
-        margin-bottom: 30px;
+        @include button;
     }
 }
 
-.site-operation h2{
+section.operation {
+    @include padding-bloc;
+    // padding-top: 30px;
+}
+section.operation h2{
     @extend .p-l-h2;
 }
-div.site-operation__buttons {
-    display: flex;
-    flex-direction: column;
-    & button {
-        position: relative;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        width: 86%;
-        height: 70px;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: $color-light-gray;
-        @include border($color-light-gray);
-        border-radius: 20px;
-        margin-bottom: 20px;
-        @include box-shadow;
-        font-size: 1rem;
+.operation__list {
+    position: relative;
+    // flex-direction: column;
+    @extend .bloc-list;
+    //@media 1024px {flex-direction: row;}
+    &--item {
+        @extend .bloc-list-item;
+        padding-left: 5px;
+        //@media 768px {max-width: 300px;}
+        //@media 1024px {max-width: 300px;}
         &:hover {
             background-color: hsla(267,66%,60%,0.12);
-        }
-            & .fas:hover {
+            & .fas {
                 color: $color-primary;
             }
+        }
         & span {
             position: absolute;
-            left: -10PX;
-            top: 22px;
+            left: -12PX;
+            // top: 22px;
             border-radius: 50%;
             border: 1px solid $color-primary;
             padding: 4px 8px;
@@ -159,15 +217,12 @@ div.site-operation__buttons {
     } 
 }
 
-.selection h2 {
-    @extend .p-l-h2;
-}
-.restaurant {
+.selection {
     @include padding-bloc;
-    padding-bottom: 45px;
-    & a {
-        z-index: 1;
-        .restaurant__card {
+    background-color: $color-light-gray;
+    &__restaurant {
+        padding-bottom: 30px;
+        &--card {
             width: auto;
             height: 15.5rem;
             background: white;
@@ -176,37 +231,13 @@ div.site-operation__buttons {
             position: relative;
             margin-bottom: 1.1rem;
             @include box-shadow;
-            &__img {
+            &--img {
                 width: 100%;
                 height: 170px;
                 object-fit: cover;
                 max-width: 100%;
                 z-index: 1;
             }
-            .restaurant__card__description {
-                @include border($color-light-gray#000000);
-                @include padding-element;
-                border-radius: 20px;
-                position: relative;
-                & h3{
-                    margin: 0;
-                    padding-bottom: 2px;
-                }
-            }
-            .restaurant__card__description p{
-                margin: 0;
-                font-weight: 300;
-                font-size: 1.05rem;
-            }
-            i.far.fa-heart {
-                position: absolute;
-                top: 15px;
-                right: 20px;
-                font-size: 1.5rem;
-                background-color: $color-white;
-            }
-
-            
             span.new {
                 position: absolute;
                 z-index: 2;
@@ -220,51 +251,127 @@ div.site-operation__buttons {
                 font-weight: bold;
                 color: darken($color-tertiary, 35%);
             }
+            &--description {
+                @include border($color-light-gray#000000);
+                @include padding-element;
+                border-radius: 20px;
+                position: relative;
+                & h3 {
+                    margin: 0px;
+                    padding-bottom: 2px;
+                }
+                & p {
+                    margin: 0;
+                    font-weight: 300;
+                    font-size: 1.05rem;
+                }
+                i.far.fa-heart {
+                    position: absolute;
+                    top: 15px;
+                    right: 20px;
+                    font-size: 1.5rem;
+                    background-color: $color-white;
+                }
+            }
         }
     }
-
 }
 
-
-
-footer {
+.footer-nav {
     background-color: $color-bg-footer;
     @include padding-bloc;
-        & p {
-            margin-top: 0; 
+    &__logo {
+        padding-bottom: 20px;
+        & a {
+            font-size: 1.1rem;
+            color: $color-white;
+            font-family: $font-logo-title;
         }
-            .logo-title {
-                font-family: $font-logo-title;
-                font-size: 1.1rem;
-                color: $color-white;
-            }
-}
-
-ul {
-    padding-left: 0;
-    list-style-type: none;
-    margin: 0;
-
-    &.proposal-links {
-        margin-bottom: 0;
     }
-        & li {
+    &__links {
+        @include reset-list;
+        margin-bottom: 0;
+        & i {
+            padding-right: 10px;
+            &.fa-hands-helping {
+                font-size: 0.7rem;
+                }
+        }
+        &--item {
             padding-bottom: 8px;
             font-size: 1rem;
-        }
             & a {
                 color: $color-white;
             }
-            & i {
-                padding-right: 10px;
-            }
-    &.useful-links {
-        margin-top: 0;
+        }
     }
 }
 
-.fa-hands-helping {
-    font-size: 0.7rem;
+.fa-arrow-left {
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    font-size: 1.3rem;
+}
+
+.banner {
+    width: 100%;
+    height: 210px;
+    position: relative;
+    &__img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
     }
+}
+
+.menu {
+    background-color: $color-light-gray;
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+    position: absolute;
+    @include padding-bloc;
+    &__bloc {
+        // display: flex;
+        // justify-content: space-between;
+        @include center-icon;
+        &--heading {
+            font-family: $font-logo-title;
+            font-size: 1.8rem;
+            // text-align: left;
+            padding-right: 30px;
+            margin: 0;
+        }
+        & p i {
+            text-align: rignt;
+            font-size: 1.5rem;
+            @include center-icon;
+        }
+    }
+}
+
+.menu__starter {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1.1rem;
+    &__list {
+        @extend .bloc-list;
+        &--item {
+            display: none;
+            // flex-direction: column;
+            @extend .bloc-list-item;
+        }
+    }
+}
+
+
+
+form{
+    text-align: center;
+    & .order__button {
+        width: 200px;
+        @include button;
+    }
+}
 
 
