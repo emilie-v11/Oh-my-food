@@ -1,24 +1,9 @@
-@import "./utilities/_index";
+@import "./base/index";
+@import "./components/index";
+@import "./layout/index";
+@import "./pages/index";
+@import "./utilities/index";
 
-// Variables
-// Variables Fonts
-$font-logo-title: 'Shrikhand', cursive;
-$font-text: 'Roboto', sans-serif;
-
-// Variables colors
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
-
-$color-light-gray: #F6F6F6;
-$color-gray: #EAEAEA;
-$color-shadow-gray: #d9d9d9;
-
-$color-white: #FFFFFF;
-$color-bg-footer: #353535;
-$color-dark-text: #000000;
-
-$color-shadow-header: #CFCFCF;
 
 //Mixins
 @mixin padding-bloc {
@@ -64,16 +49,7 @@ $color-shadow-header: #CFCFCF;
     font-size: 1.2rem;
 }
 
-@mixin button {
-    border: none;
-    border-radius: 25px;
-    padding: 15px;
-    color: $color-white;
-    font-size: 1rem;
-    margin-top: 15px;
-    margin-bottom: 30px;
-    background: linear-gradient($color-secondary, $color-primary);
-}
+
 /* Reduire les répetitions de
 font-size: 1rem;
 */
@@ -114,33 +90,11 @@ padding-left des h2
 }
 
 
-//
-body {
-    margin: 0;
-    padding: 0;
-    font-family: $font-text;
-}
+//============================================================================================
 
-*, ::before, ::after {
-    box-sizing: border-box;
-}
-
-a {
-    @include reset-link;
-    color: $color-dark-text;
-}
+//header
 
 
-header {
-    @include padding-bloc;
-    padding-bottom: 5px;
-    @include header-shadow;
-    text-align: center;
-    position: relative;
-        img.header__brand-logo {
-            width: 52%;
-        }
-}
 
 .search {
     width: 100%;
@@ -188,7 +142,7 @@ section.operation h2{
     // flex-direction: column;
     @extend .bloc-list;
     //@media 1024px {flex-direction: row;}
-    &--item {
+    & li {
         @extend .bloc-list-item;
         padding-left: 5px;
         //@media 768px {max-width: 300px;}
@@ -222,7 +176,7 @@ section.operation h2{
     background-color: $color-light-gray;
     &__restaurant {
         padding-bottom: 30px;
-        &--card {
+        &__card {
             width: auto;
             height: 15.5rem;
             background: white;
@@ -231,7 +185,7 @@ section.operation h2{
             position: relative;
             margin-bottom: 1.1rem;
             @include box-shadow;
-            &--img {
+            & img {
                 width: 100%;
                 height: 170px;
                 object-fit: cover;
@@ -251,7 +205,7 @@ section.operation h2{
                 font-weight: bold;
                 color: darken($color-tertiary, 35%);
             }
-            &--description {
+            &__description {
                 @include border($color-light-gray#000000);
                 @include padding-element;
                 border-radius: 20px;
@@ -277,43 +231,21 @@ section.operation h2{
     }
 }
 
-.footer-nav {
-    background-color: $color-bg-footer;
-    @include padding-bloc;
-    &__logo {
-        padding-bottom: 20px;
-        & a {
-            font-size: 1.1rem;
-            color: $color-white;
-            font-family: $font-logo-title;
-        }
-    }
-    &__links {
-        @include reset-list;
-        margin-bottom: 0;
-        & i {
-            padding-right: 10px;
-            &.fa-hands-helping {
-                font-size: 0.7rem;
-                }
-        }
-        &--item {
-            padding-bottom: 8px;
-            font-size: 1rem;
-            & a {
-                color: $color-white;
-            }
-        }
-    }
-}
 
+//===================================================================================================
+/*page menu1
+*/
+
+//arrow back previous page
 .fa-arrow-left {
-    position: absolute;
+    // position: absolute;
+    float: left;
     left: 20px;
     top: 25px;
     font-size: 1.3rem;
 }
 
+//banner restaurant image
 .banner {
     width: 100%;
     height: 210px;
@@ -325,6 +257,7 @@ section.operation h2{
     }
 }
 
+// restaurant's menu
 .menu {
     background-color: $color-light-gray;
     width: 100%;
@@ -335,7 +268,7 @@ section.operation h2{
         // display: flex;
         // justify-content: space-between;
         @include center-icon;
-        &--heading {
+        &__heading {
             font-family: $font-logo-title;
             font-size: 1.8rem;
             // text-align: left;
@@ -350,13 +283,15 @@ section.operation h2{
     }
 }
 
+// menu starter
+
 .menu__starter {
     text-transform: uppercase;
     font-weight: 300;
     font-size: 1.1rem;
     &__list {
         @extend .bloc-list;
-        &--item {
+        &__item {
             display: none;
             // flex-direction: column;
             @extend .bloc-list-item;
@@ -364,9 +299,8 @@ section.operation h2{
     }
 }
 
-
-
-form{
+//button for order
+form { 
     text-align: center;
     & .order__button {
         width: 200px;

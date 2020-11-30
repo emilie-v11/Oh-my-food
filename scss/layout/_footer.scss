@@ -1,0 +1,31 @@
+// footer for homepage & pages menus
+
+.footer-nav {
+    background-color: $color-bg-footer;
+    @include padding-bloc;
+    &__logo {
+        padding-bottom: 20px;
+        & a {
+            font-size: 1.1rem;
+            color: $color-white;
+            font-family: $font-logo-title;
+        }
+    }
+    &__links {
+        @include reset-list;
+        margin-bottom: 0;
+        & i {
+            padding-right: 10px;
+            &.fa-hands-helping {
+                font-size: 0.7rem;
+                }
+        }
+        &__item {
+            padding-bottom: 8px;
+            font-size: 1rem;
+            & a {
+                color: $color-white;
+            }
+        }
+    }
+}

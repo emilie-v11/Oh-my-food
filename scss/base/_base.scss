@@ -1,0 +1,17 @@
+/*
+BASE
+*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-text;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+a {
+    @include reset-link;
+    color: $color-dark-text;
+}
