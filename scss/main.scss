@@ -1,53 +1,11 @@
+// imports
+
+@import "./utilities/index";
 @import "./base/index";
 @import "./components/index";
 @import "./layout/index";
 @import "./pages/index";
-@import "./utilities/index";
 
-
-//Mixins
-@mixin padding-bloc {
-    padding: 1.3rem 1.3rem;
-}
-@mixin padding-element {
-    padding-left: 10px;
-    padding-top: 10px;
-}
-@mixin reset-link {
-        text-decoration: none;
-        padding: 0;
-}
-@mixin reset-list {
-    padding-left: 0;
-    list-style-type: none;
-    margin: 0;
-}
-
-@mixin box-shadow {
-    box-shadow: $color-shadow-gray 0px 5px 5px 0px;
-}
-@mixin header-shadow {
-    box-shadow: $color-shadow-header 0px 3px 5px 0px;
-}
-
-@mixin auto-center {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@mixin center-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-@mixin border ($color){
-    border: 1px solid $color;
-}
-@mixin button-fa {
-    margin: 0 1.5rem 0 .7rem;
-    color: #7e7e7e;
-    font-size: 1.2rem;
-}
 
 
 /* Reduire les répetitions de
@@ -57,47 +15,13 @@ font-size: 1rem;
 /* Faire une extension avec les 
 padding-left des h2
 */
-//Extensions
-.p-l-h2 {
-    padding-left: 1.2rem;
-}
 
-.bloc-list {
-    display: flex;
-    // flex-direction: column;
-    flex-wrap: wrap;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 25px;
-}
-
-.bloc-list-item {
-    position: relative;
-    display: flex;
-    // justify-content: start;
-    align-items: center;
-    width: 100%;
-    max-width: 400px;
-    height: 70px;
-    @include auto-center;
-    background-color: $color-light-gray;
-    @include border($color-light-gray);
-    border-radius: 20px;
-    margin-bottom: 20px;
-    padding-bottom: 0;
-    @include box-shadow;
-    font-size: 1rem;
-}
 
 
 //============================================================================================
 
-//header
-
-
-
 .search {
-    width: 100%;
+    // width: 100%;
     text-align: center;
     background-color: $color-gray;
     padding: 6px;
@@ -117,16 +41,11 @@ padding-left des h2
     text-align: center;
     background-color: $color-light-gray;
     &__heading {
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
+        padding: 0;
     }
     &__paragraph {
         font-weight: lighter;
         font-size: 1.1rem;
-    }
-    &__button {
-        width: 220px;
-        @include button;
     }
 }
 
@@ -134,9 +53,9 @@ section.operation {
     @include padding-bloc;
     // padding-top: 30px;
 }
-section.operation h2{
-    @extend .p-l-h2;
-}
+// section.operation h2{
+//     // @extend .p-l-h2;
+// }
 .operation__list {
     position: relative;
     // flex-direction: column;
@@ -171,10 +90,10 @@ section.operation h2{
     } 
 }
 
-.selection {
+.restaurants {
     @include padding-bloc;
     background-color: $color-light-gray;
-    &__restaurant {
+    &__bloc {
         padding-bottom: 30px;
         &__card {
             width: auto;
@@ -299,13 +218,6 @@ section.operation h2{
     }
 }
 
-//button for order
-form { 
-    text-align: center;
-    & .order__button {
-        width: 200px;
-        @include button;
-    }
-}
+
 
 

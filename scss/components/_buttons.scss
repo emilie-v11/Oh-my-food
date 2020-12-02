@@ -1,4 +1,4 @@
-// button 
+// base for button 
 @mixin button {
     border: none;
     border-radius: 25px;
@@ -8,4 +8,19 @@
     margin-top: 15px;
     margin-bottom: 30px;
     background: linear-gradient($color-secondary, $color-primary);
+}
+
+//button for go to restaurants section
+.presentation__button {
+    @include button;
+    width: 220px;
+}
+
+//button for order
+form { 
+    text-align: center;
+    & .order__button {
+        @include button;
+        width: 200px;
+    }
 }

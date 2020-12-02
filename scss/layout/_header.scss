@@ -1,11 +1,11 @@
 // header homepage omf
 
 header {
-    @include padding-bloc;
+    padding: 1.3rem 1.3rem;
     padding-bottom: 5px;
     @include header-shadow;
     text-align: center;
-    // position: relative;
+    position: relative;
         img.header__brand-logo {
             width: 52%;
         }

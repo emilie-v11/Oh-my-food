@@ -1,0 +1,43 @@
+//Mixins
+@mixin padding-bloc {
+    padding: 1.3rem 1.3rem;
+}
+@mixin padding-element {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+@mixin reset-link {
+        text-decoration: none;
+        padding: 0;
+}
+@mixin reset-list {
+    padding-left: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+@mixin box-shadow {
+    box-shadow: $color-shadow-gray 0px 5px 5px 0px;
+}
+@mixin header-shadow {
+    box-shadow: $color-shadow-header 0px 3px 5px 0px;
+}
+
+@mixin auto-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin center-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin border ($color){
+    border: 1px solid $color;
+}
+@mixin button-fa {
+    margin: 0 1.5rem 0 .7rem;
+    color: #7e7e7e;
+    font-size: 1.2rem;
+}

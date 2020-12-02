@@ -1,0 +1,31 @@
+//Extensions
+.p-l-h2 {
+    padding-left: 1.2rem;
+}
+
+.bloc-list {
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 25px;
+}
+
+.bloc-list-item {
+    position: relative;
+    display: flex;
+    // justify-content: start;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    height: 70px;
+    @include auto-center;
+    background-color: $color-light-gray;
+    @include border($color-light-gray);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    @include box-shadow;
+    font-size: 1rem;
+}
