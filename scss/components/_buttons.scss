@@ -7,7 +7,8 @@
     font-size: 1rem;
     margin-top: 15px;
     margin-bottom: 30px;
-    background: linear-gradient($color-secondary, $color-primary);
+    // background: linear-gradient($color-secondary, $color-primary);
+    background: $color-linear-gradient;
 }
 
 //button for go to restaurants section
@@ -24,3 +25,12 @@ form {
         width: 200px;
     }
 }
+
+// darken the shadow-box and 
+//brightness the color for the linear-gradient button
+.presentation__button:hover,
+.order__button:hover {
+    filter: brightness(115%);
+    @include box-shadow-darken;
+ }
+

@@ -5,10 +5,12 @@ $color-tertiary: #99E2D0;
 
 $color-light-gray: #F6F6F6;
 $color-gray: #EAEAEA;
-$color-shadow-gray: #d9d9d9;
 
 $color-white: #FFFFFF;
 $color-bg-footer: #353535;
 $color-dark-text: #000000;
 
 $color-shadow-header: #CFCFCF;
+$color-shadow-gray: #d9d9d9;
+
+$color-linear-gradient: linear-gradient($color-secondary, $color-primary);

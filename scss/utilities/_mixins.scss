@@ -16,11 +16,17 @@
     margin: 0;
 }
 
+@mixin header-shadow {
+    box-shadow: $color-shadow-header 0px 3px 5px 0px;
+}
+
 @mixin box-shadow {
     box-shadow: $color-shadow-gray 0px 5px 5px 0px;
 }
-@mixin header-shadow {
-    box-shadow: $color-shadow-header 0px 3px 5px 0px;
+
+//darken the shadow-box
+@mixin box-shadow-darken {
+    box-shadow: 0px 5px 5px 0px darken($color: $color-shadow-gray, $amount: 20);
 }
 
 @mixin auto-center {
