@@ -441,14 +441,26 @@ form .order__button {
 header {
   padding: 1.3rem 1.3rem;
   padding-bottom: 5px;
-  -webkit-box-shadow: #CFCFCF 0px 3px 5px 0px;
-          box-shadow: #CFCFCF 0px 3px 5px 0px;
   text-align: center;
-  position: relative;
 }
 
 header img.header__brand-logo {
-  width: 52%;
+  width: 50%;
+}
+
+/*
+header omf homepage
+-> add relative position & box-shadow
+-> hidden the arrow for back homepage
+*/
+.omf-homepage header {
+  position: relative;
+  -webkit-box-shadow: #CFCFCF 0px 3px 5px 0px;
+          box-shadow: #CFCFCF 0px 3px 5px 0px;
+}
+
+.omf-homepage header .back-home {
+  display: none;
 }
 
 .footer-nav {
@@ -528,6 +540,10 @@ padding-left des h2
   font-size: 1rem;
 }
 
+.search__icon {
+  padding-left: 80px;
+}
+
 .presentation {
   padding: 1.3rem 1.3rem;
   text-align: center;
@@ -557,8 +573,6 @@ section.operation {
 
 .operation__list li:hover {
   background-color: rgba(146, 86, 220, 0.12);
-  -webkit-box-shadow: 0px 5px 5px 0px #a6a6a6;
-          box-shadow: 0px 5px 5px 0px #a6a6a6;
 }
 
 .operation__list li:hover .fas {
@@ -602,11 +616,6 @@ section.operation {
   margin-bottom: 1.1rem;
   -webkit-box-shadow: #d9d9d9 0px 5px 5px 0px;
           box-shadow: #d9d9d9 0px 5px 5px 0px;
-}
-
-.restaurants__bloc__card:hover {
-  -webkit-box-shadow: 0px 5px 5px 0px #a6a6a6;
-          box-shadow: 0px 5px 5px 0px #a6a6a6;
 }
 
 .restaurants__bloc__card img {
@@ -684,7 +693,6 @@ section.operation {
   background-color: #F6F6F6;
   width: 100%;
   border-radius: 25px 25px 0 0;
-  position: absolute;
   padding: 1.3rem 1.3rem;
 }
 

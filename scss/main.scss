@@ -34,6 +34,9 @@ padding-left des h2
             font-size: 1rem;
         }
     }
+    &__icon {
+        padding-left: 80px;
+    }
 }
 
 .presentation {
@@ -66,7 +69,7 @@ section.operation {
         //@media 1024px {max-width: 300px;}
         &:hover {
             background-color: hsla(267,66%,60%,0.12);
-            @include box-shadow-darken;
+            // @include box-shadow-darken;
             & .fas {
                 color: $color-primary;
             }
@@ -103,9 +106,9 @@ section.operation {
             position: relative;
             margin-bottom: 1.1rem;
             @include box-shadow;
-            &:hover {
-                @include box-shadow-darken;
-            }
+            // &:hover {
+            //     @include box-shadow-darken;
+            // }
             & img {
                 width: 100%;
                 height: 170px;
@@ -183,7 +186,7 @@ section.operation {
     background-color: $color-light-gray;
     width: 100%;
     border-radius: 25px 25px 0 0;
-    position: absolute;
+    // position: absolute;
     @include padding-bloc;
     &__bloc {
         // display: flex;

@@ -1,12 +1,25 @@
-// header homepage omf
-
+// header
 header {
     padding: 1.3rem 1.3rem;
     padding-bottom: 5px;
-    @include header-shadow;
     text-align: center;
-    position: relative;
+    // @include header-shadow;
+    // position: relative;
         img.header__brand-logo {
-            width: 52%;
+            width: 50%;
         }
 }
+
+/*
+header omf homepage
+-> add relative position & box-shadow
+-> hidden the arrow for back homepage
+*/
+.omf-homepage header{
+    position: relative;
+    @include header-shadow;
+    & .back-home {
+        display: none;
+    }
+}
+    
