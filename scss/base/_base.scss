@@ -1,7 +1,7 @@
 /*
 BASE
 */
-body, .omf-homepage {
+body {
     margin: 0;
     padding: 0;
     font-family: $font-text;
@@ -9,7 +9,10 @@ body, .omf-homepage {
 
 *, ::before, ::after {
     box-sizing: border-box;
+    outline: none;
 }
+
+
 
 a {
     @include reset-link;

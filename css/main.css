@@ -1,9 +1,8 @@
-@charset "UTF-8";
 .p-l-h2 {
   padding-left: 1.2rem;
 }
 
-.bloc-list, .operation__list, .menu__starter__list {
+.bloc-list, .operation__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,7 +13,7 @@
   padding-bottom: 25px;
 }
 
-.bloc-list-item, .operation__list li, .menu__starter__list__item {
+.bloc-list-item, .operation__list li {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -27,7 +26,6 @@
   height: 70px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #F6F6F6;
   border: 1px solid #F6F6F6;
   border-radius: 20px;
   margin-bottom: 20px;
@@ -383,7 +381,7 @@ template {
 /*
 BASE
 */
-body, .omf-homepage {
+body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
@@ -392,6 +390,7 @@ body, .omf-homepage {
 *, ::before, ::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  outline: none;
 }
 
 a {
@@ -427,7 +426,8 @@ form .order__button {
   margin-bottom: 30px;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
-  width: 200px;
+  width: 190px;
+  margin-top: 8px;
 }
 
 .presentation__button:hover,
@@ -440,7 +440,7 @@ form .order__button {
 
 header {
   padding: 1.3rem 1.3rem;
-  padding-bottom: 5px;
+  padding-bottom: 8px;
   text-align: center;
 }
 
@@ -469,6 +469,7 @@ header omf homepage
 }
 
 .footer-nav__logo {
+  padding-top: 5px;
   padding-bottom: 20px;
 }
 
@@ -502,46 +503,45 @@ header omf homepage
   color: #FFFFFF;
 }
 
-/* Reduire les répetitions de
-font-size: 1rem;
-*/
-/* Faire une extension avec les 
-padding-left des h2
-*/
 .search {
   text-align: center;
   background-color: #EAEAEA;
-  padding: 6px;
+  padding: 15px;
+}
+
+.search__icon {
+  padding-left: 60px;
 }
 
 .search__input {
-  margin: 10px;
+  margin: 0px;
+  padding-left: 10px;
   border: none;
   background-color: #EAEAEA;
 }
 
 .search__input::-webkit-input-placeholder {
+  outline: none;
   color: #000000;
   font-size: 1rem;
 }
 
 .search__input:-ms-input-placeholder {
+  outline: none;
   color: #000000;
   font-size: 1rem;
 }
 
 .search__input::-ms-input-placeholder {
+  outline: none;
   color: #000000;
   font-size: 1rem;
 }
 
 .search__input::placeholder {
+  outline: none;
   color: #000000;
   font-size: 1rem;
-}
-
-.search__icon {
-  padding-left: 70px;
 }
 
 .presentation {
@@ -551,7 +551,8 @@ padding-left des h2
 }
 
 .presentation__heading {
-  padding: 0;
+  font-size: 1.5rem;
+  padding: 0 2rem;
 }
 
 .presentation__paragraph {
@@ -568,6 +569,7 @@ section.operation {
 }
 
 .operation__list li {
+  background-color: #F6F6F6;
   padding-left: 5px;
 }
 
@@ -668,7 +670,7 @@ section.operation {
   background-color: #FFFFFF;
 }
 
-/*page menu1
+/*page menu
 */
 .fa-arrow-left {
   float: left;
@@ -679,45 +681,114 @@ section.operation {
 
 .banner {
   width: 100%;
-  height: 210px;
+  height: 300px;
+  position: relative;
 }
 
 .banner__img {
   width: 100%;
-  height: 280px;
+  height: 17.5rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.menu {
-  background-color: #F6F6F6;
+.banner__heading {
   width: 100%;
-  border-radius: 25px 25px 0 0;
-  padding: 1.3rem 1.3rem;
-}
-
-.menu__bloc {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 20px;
+  padding-top: 30px;
+  padding-bottom: 12px;
+  background-color: #F6F6F6;
+  border-radius: 40px 40px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-.menu__bloc__heading {
+.banner h1 {
   font-family: "Shrikhand", cursive;
   font-size: 1.8rem;
-  padding-right: 30px;
+  font-weight: normal;
   margin: 0;
 }
 
-.menu__bloc p i {
-  text-align: rignt;
+.banner i {
   font-size: 1.5rem;
+  padding-right: 10px;
+}
+
+.omf-menu main {
+  background-color: #F6F6F6;
+}
+
+.menu {
+  padding: 10px 15px 0 15px;
+}
+
+.menu h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  padding-left: 5px;
+}
+
+.menu-list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #FFFFFF;
+  border-radius: 15px;
+  -webkit-box-shadow: #d9d9d9 0px 5px 5px 0px;
+          box-shadow: #d9d9d9 0px 5px 5px 0px;
+  margin: 1rem auto;
+  overflow: hidden;
+}
+
+.menu-list__item {
+  position: relative;
+  width: 100%;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.menu-list__item h3 {
+  width: 83%;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin: 0;
+  line-height: 25px;
+}
+
+.menu-list__item .description {
+  font-size: 0.95rem;
+  width: 83%;
+  margin: 0;
+  line-height: 20px;
+  font-weight: 300;
+}
+
+.menu-list__item .price {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 20px;
+  margin: 0;
+}
+
+.menu-list .icon {
+  background-color: #99E2D0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -727,15 +798,50 @@ section.operation {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 0px;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
-.menu__starter {
-  text-transform: uppercase;
-  font-weight: 300;
-  font-size: 1.1rem;
+.menu-list .icon .fas.fa-check-circle {
+  opacity: 0;
+  color: #FFFFFF;
+  font-size: 1.3rem;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 800ms;
+  transition: 800ms;
 }
 
-.menu__starter__list__item {
-  display: none;
+.menu-list .icon .fas.fa-check-circle::before {
+  content: "\f058";
+}
+
+.menu-list:hover {
+  -webkit-transform: translate(0px);
+          transform: translate(0px);
+}
+
+.menu-list:hover h3, .menu-list:hover .description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menu-list:hover .icon {
+  width: 75px;
+}
+
+.menu-list:hover .icon .fas.fa-check-circle {
+  opacity: 1;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.order {
+  padding: 30px;
+  padding-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /*# sourceMappingURL=main.css.map */

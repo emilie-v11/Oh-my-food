@@ -4,6 +4,7 @@
     background-color: $color-bg-footer;
     @include padding-bloc;
     &__logo {
+        padding-top: 5px;
         padding-bottom: 20px;
         & a {
             font-size: 1.1rem;
