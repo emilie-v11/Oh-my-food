@@ -11,12 +11,6 @@
     background: $color-linear-gradient;
 }
 
-//button for go to restaurants section
-.presentation__button {
-    @include button;
-    width: 220px;
-}
-
 //button for order
 form { 
     text-align: center;
@@ -29,11 +23,8 @@ form {
 
 // darken the shadow-box and 
 //brightness the color for the linear-gradient button
-.presentation__button:hover,
+.jumbotron__button:hover,
 .order__button:hover {
     filter: brightness(115%);
     @include box-shadow-darken;
  }
-
- 
-

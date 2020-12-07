@@ -1,0 +1,20 @@
+.search {
+    // width: 100%;
+    text-align: center;
+    background-color: $color-gray;
+    padding: 15px;
+    &__icon {
+        padding-left: 60px;
+    }
+    &__input {
+        margin: 0px;
+        padding-left: 10px;
+        border: none;
+        background-color: #EAEAEA;
+        &::placeholder {
+            outline: none;
+            color: $color-dark-text;
+            font-size: 1rem;
+        }
+    }
+}   
