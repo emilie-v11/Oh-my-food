@@ -39,7 +39,7 @@
     align-items: center;
     justify-content: center;
 }
-@mixin border ($color){
+@mixin border ($color) {
     border: 1px solid $color;
 }
 @mixin button-fa {
