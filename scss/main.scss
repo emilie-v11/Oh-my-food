@@ -9,41 +9,11 @@
 //============================================================================================
 
 
-.search {
-    // width: 100%;
-    text-align: center;
-    background-color: $color-gray;
-    padding: 15px;
-    &__icon {
-        padding-left: 60px;
-    }
-    &__input {
-        margin: 0px;
-        padding-left: 10px;
-        border: none;
-        background-color: #EAEAEA;
-        &::placeholder {
-            outline: none;
-            color: $color-dark-text;
-            font-size: 1rem;
-        }
-    }
-}
-
-.presentation {
-    @include padding-bloc;
-    text-align: center;
-    background-color: $color-light-gray;
-    &__heading {
-        font-size: 1.5rem;
-        padding: 0 2rem;
-    }
-    &__paragraph {
-        font-weight: lighter;
-        font-size: 1.1rem;
-    }
-}
-
+/* 
+    Review Thomas:
+        1. changer operation pour instructions
+        2. le mettre soit dans le dossier components, soit dans le dossier layout
+ */
 section.operation {
     @include padding-bloc;
     // padding-top: 30px;
@@ -85,6 +55,7 @@ section.operation {
     } 
 }
 
+// Mettre restaurant soit dans layout, soit dans components
 .restaurants {
     @include padding-bloc;
     background-color: $color-light-gray;
