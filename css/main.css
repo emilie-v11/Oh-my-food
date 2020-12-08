@@ -2,7 +2,7 @@
   padding-left: 1.2rem;
 }
 
-.bloc-list, .operation__list {
+.bloc-list, .instructions__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,7 +13,7 @@
   padding-bottom: 25px;
 }
 
-.bloc-list-item, .operation__list li {
+.bloc-list-item, .instructions__list li {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -33,6 +33,44 @@
   -webkit-box-shadow: #d9d9d9 0px 5px 5px 0px;
           box-shadow: #d9d9d9 0px 5px 5px 0px;
   font-size: 1rem;
+}
+
+.menu-list:hover {
+  -webkit-transform: translate(0px);
+          transform: translate(0px);
+}
+
+.menu-list:hover h3, .menu-list:hover .description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menu-list:hover .icon {
+  width: 75px;
+}
+
+.menu-list:hover .icon .fas.fa-check-circle {
+  opacity: 1;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.fas.fa-heart {
+  font-weight: normal;
+  -webkit-transition-property: font-weight, background-color;
+  transition-property: font-weight, background-color;
+  -webkit-transition: all 0.7s linear 0s;
+  transition: all 0.7s linear 0s;
+}
+
+.fas.fa-heart:hover {
+  font-weight: bolder;
+  color: transparent;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -425,6 +463,36 @@ form .order__button {
           box-shadow: 0px 5px 5px 0px #a6a6a6;
 }
 
+.menu-list .icon {
+  background-color: #99E2D0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 0px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.menu-list .icon .fas.fa-check-circle {
+  opacity: 0;
+  color: #FFFFFF;
+  font-size: 1.3rem;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 800ms;
+  transition: 800ms;
+}
+
+.menu-list .icon .fas.fa-check-circle::before {
+  content: "\f058";
+}
+
 .search {
   text-align: center;
   background-color: #EAEAEA;
@@ -495,6 +563,52 @@ form .order__button {
   width: 220px;
 }
 
+.banner {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.banner__img {
+  width: 100%;
+  height: 17.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.banner__heading {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 20px;
+  padding-top: 30px;
+  padding-bottom: 12px;
+  background-color: #F6F6F6;
+  border-radius: 40px 40px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.8rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.banner i {
+  font-size: 1.5rem;
+  padding-right: 10px;
+}
+
 header {
   padding: 1.3rem 1.3rem;
   padding-bottom: 8px;
@@ -503,6 +617,14 @@ header {
 
 header img.header__brand-logo {
   width: 50%;
+  max-width: 300px;
+}
+
+header .fa-arrow-left {
+  float: left;
+  left: 20px;
+  top: 25px;
+  font-size: 1.3rem;
 }
 
 /*
@@ -518,6 +640,13 @@ header omf homepage
 
 .omf-homepage header .back-home {
   display: none;
+}
+
+.order {
+  padding: 30px;
+  padding-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-nav {
@@ -562,31 +691,32 @@ header omf homepage
 
 /* 
     Review Thomas:
-        1. changer operation pour instructions
+        1. instructions
         2. le mettre soit dans le dossier components, soit dans le dossier layout
  */
-section.operation {
+section.instructions {
   padding: 1.3rem 1.3rem;
 }
 
-.operation__list {
+.instructions__list {
   position: relative;
+  margin: 0;
 }
 
-.operation__list li {
+.instructions__list li {
   background-color: #F6F6F6;
   padding-left: 5px;
 }
 
-.operation__list li:hover {
+.instructions__list li:hover {
   background-color: rgba(146, 86, 220, 0.12);
 }
 
-.operation__list li:hover .fas {
+.instructions__list li:hover .fas {
   color: #9356DC;
 }
 
-.operation__list li span {
+.instructions__list li span {
   position: absolute;
   left: -12PX;
   border-radius: 50%;
@@ -597,7 +727,7 @@ section.operation {
   color: #FFFFFF;
 }
 
-.operation__list li i {
+.instructions__list li i {
   margin: 0 1.5rem 0 .7rem;
   color: #7e7e7e;
   font-size: 1.2rem;
@@ -672,64 +802,14 @@ section.operation {
   top: 15px;
   right: 20px;
   font-size: 1.5rem;
-  background-color: #FFFFFF;
+}
+
+.restaurants__bloc__card__description i.far.fa-heart:before {
+  color: blue;
 }
 
 /*page menu
 */
-.fa-arrow-left {
-  float: left;
-  left: 20px;
-  top: 25px;
-  font-size: 1.3rem;
-}
-
-.banner {
-  width: 100%;
-  height: 300px;
-  position: relative;
-}
-
-.banner__img {
-  width: 100%;
-  height: 17.5rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.banner__heading {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  margin: 0;
-  padding: 20px;
-  padding-top: 30px;
-  padding-bottom: 12px;
-  background-color: #F6F6F6;
-  border-radius: 40px 40px 0 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.banner h1 {
-  font-family: "Shrikhand", cursive;
-  font-size: 1.8rem;
-  font-weight: normal;
-  margin: 0;
-}
-
-.banner i {
-  font-size: 1.5rem;
-  padding-right: 10px;
-}
-
 .omf-menu main {
   background-color: #F6F6F6;
 }
@@ -790,63 +870,5 @@ section.operation {
   font-weight: 700;
   line-height: 20px;
   margin: 0;
-}
-
-.menu-list .icon {
-  background-color: #99E2D0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 0px;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-.menu-list .icon .fas.fa-check-circle {
-  opacity: 0;
-  color: #FFFFFF;
-  font-size: 1.3rem;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-transition: 800ms;
-  transition: 800ms;
-}
-
-.menu-list .icon .fas.fa-check-circle::before {
-  content: "\f058";
-}
-
-.menu-list:hover {
-  -webkit-transform: translate(0px);
-          transform: translate(0px);
-}
-
-.menu-list:hover h3, .menu-list:hover .description {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.menu-list:hover .icon {
-  width: 75px;
-}
-
-.menu-list:hover .icon .fas.fa-check-circle {
-  opacity: 1;
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-}
-
-.order {
-  padding: 30px;
-  padding-bottom: 40px;
-  margin-left: auto;
-  margin-right: auto;
 }
 /*# sourceMappingURL=main.css.map */

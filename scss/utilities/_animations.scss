@@ -1,0 +1,43 @@
+// animation menus pages
+// animation for the Check, hover the menu-list :
+.menu-list:hover {
+    transform: translate(0px);
+    & h3, .description {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    & .icon {
+        width: 75px;
+        & .fas.fa-check-circle {
+            opacity: 1;
+            transform: rotate(360deg);
+        }
+    }
+}
+
+// animation homepage cards and main title menu pages
+//animation change heart's color with hover:
+.fas.fa-heart {
+    font-weight: normal;
+    transition-property: font-weight, background-color;
+    // transition-duration: 700ms ease;
+    transition: all 0.7s linear 0s;
+    &:hover {
+        font-weight: bolder;
+        color: transparent;
+        background: $color-linear-gradient;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+}
+
+
+// animation menus pages
+// progressive appearance of dishes
+
+
+
+
+// animation homepage
+//animation spinner loading

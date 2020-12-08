@@ -1,0 +1,7 @@
+//Pages menu 1,2,3,4
+//bloc button order : center and padding
+.order {
+    padding: 30px;
+    padding-bottom: 40px;
+    @include auto-center;
+}

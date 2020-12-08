@@ -7,6 +7,16 @@ header {
     // position: relative;
     img.header__brand-logo {
         width: 50%;
+        max-width: 300px;
+    }
+
+    //arrow back previous page
+    .fa-arrow-left {
+    // position: absolute;
+    float: left;
+    left: 20px;
+    top: 25px;
+    font-size: 1.3rem;
     }
 }
 
