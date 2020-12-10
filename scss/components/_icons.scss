@@ -1,15 +1,16 @@
 //Check icon at the end of the dish line, menu pages
 .menu-list .icon {
     background-color: $color-tertiary;
+    border-radius: 0 15px 15px 0;
     @include center-icon;
+    transition: 500ms;
     width: 0px;
-    transition: 1s;
     & .fas.fa-check-circle {
-        opacity: 0;
+        opacity: 0; //laisser ou enlever ?
         color: $color-white;
         font-size: 1.3rem;
         transform: rotate(0deg);
-        transition: 800ms; //700ms ??
+        transition: 600ms; //500ms 700ms ??
         &::before {
             content: "\f058";
         }

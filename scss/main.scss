@@ -95,28 +95,20 @@ section.instructions {
             }
 
             &__description {
-                @include border($color-light-gray#000000);
-                @include padding-element;
+                padding-top: 13px;
+                padding-left: 12px;
                 border-radius: 20px;
                 position: relative;
 
                 & h3 {
                     margin: 0px;
-                    padding-bottom: 2px;
+                    padding-bottom: 4px;
                 }
 
                 & p {
                     margin: 0;
                     font-weight: 300;
                     font-size: 1.05rem;
-                }
-
-                & i.far.fa-heart {
-                    position: absolute;
-                    top: 15px;
-                    right: 20px;
-                    font-size: 1.5rem;
-                    // background-color: $color-white;
                 }
             }
         }

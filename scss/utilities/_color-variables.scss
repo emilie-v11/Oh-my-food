@@ -1,16 +1,44 @@
 // Variables colors
+//=============================================================
+//main colors for :
+
+//instructions' numbers - instructions' icons hover - half's linear-gradient
 $color-primary: #9356DC;
+
+//half's half's linear-gradient
 $color-secondary: #FF79DA;
+
+//card's span "nouveau"
 $color-tertiary: #99E2D0;
 
-$color-light-gray: #F6F6F6;
+//=============================================================
+// button colors - heart hover
+$color-linear-gradient: linear-gradient($color-secondary, $color-primary);
+
+//=============================================================
+//background colors for :
+
+//header - instructions - cards - dish - footer's text
+$color-white: #FFFFFF;
+
+//input homepage
 $color-gray: #EAEAEA;
 
-$color-white: #FFFFFF;
+//jumbotron - restaurants - menus
+$color-light-gray: #F6F6F6;
+
+//footer
 $color-bg-footer: #353535;
+
+//text's color
 $color-dark-text: #000000;
 
+//=============================================================
+//Shadows box
+
+//header
 $color-shadow-header: #CFCFCF;
+
+//instructions - cards - dish - button hover
 $color-shadow-gray: #d9d9d9;
 
-$color-linear-gradient: linear-gradient($color-secondary, $color-primary);

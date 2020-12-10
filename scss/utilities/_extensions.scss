@@ -1,11 +1,8 @@
 //Extensions
-.p-l-h2 {
-    padding-left: 1.2rem;
-}
 
 .bloc-list {
     display: flex;
-    // flex-direction: column;
+    flex-direction: column;
     flex-wrap: wrap;
     padding-top: 10px;
     padding-left: 10px;
@@ -13,17 +10,17 @@
 }
 
 .bloc-list-item {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 400px;
-    height: 70px;
     @include auto-center;
     @include border($color-light-gray);
-    border-radius: 20px;
-    margin-bottom: 20px;
-    padding-bottom: 0;
     @include box-shadow;
+    align-items: center;
+    border-radius: 20px;
+    display: flex;
     font-size: 1rem;
+    height: 70px;
+    margin-bottom: 20px;
+    max-width: 400px;
+    padding-bottom: 0;
+    position: relative;
+    width: 100%;
 }

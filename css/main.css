@@ -1,11 +1,11 @@
-.p-l-h2 {
-  padding-left: 1.2rem;
-}
-
 .bloc-list, .instructions__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-top: 10px;
@@ -14,25 +14,25 @@
 }
 
 .bloc-list-item, .instructions__list li {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  max-width: 400px;
-  height: 70px;
   margin-left: auto;
   margin-right: auto;
   border: 1px solid #F6F6F6;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  padding-bottom: 0;
   -webkit-box-shadow: #d9d9d9 0px 5px 5px 0px;
           box-shadow: #d9d9d9 0px 5px 5px 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 1rem;
+  height: 70px;
+  margin-bottom: 20px;
+  max-width: 400px;
+  padding-bottom: 0;
+  position: relative;
+  width: 100%;
 }
 
 .menu-list:hover {
@@ -56,21 +56,26 @@
           transform: rotate(360deg);
 }
 
-.fas.fa-heart {
+.btn.favorite .far.fa-heart::before {
   font-weight: normal;
   -webkit-transition-property: font-weight, background-color;
   transition-property: font-weight, background-color;
-  -webkit-transition: all 0.7s linear 0s;
-  transition: all 0.7s linear 0s;
+  -webkit-transition: all 0.7s ease-out 0s;
+  transition: all 0.7s ease-out 0s;
+  -webkit-transition: opacity 800ms;
+  transition: opacity 800ms;
 }
 
-.fas.fa-heart:hover {
+.btn.favorite:hover .far.fa-heart::before {
   font-weight: bolder;
-  color: transparent;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
+  /*!important*/
   background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-transition: opacity 800ms ease-in-out;
+  transition: opacity 800ms ease-in-out;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -463,8 +468,14 @@ form .order__button {
           box-shadow: 0px 5px 5px 0px #a6a6a6;
 }
 
-.menu-list .icon {
-  background-color: #99E2D0;
+.btn.favorite {
+  background-color: #FFFFFF;
+  border: 1px solid transparent;
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  width: 54px;
+  height: 54px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -474,9 +485,60 @@ form .order__button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+.btn.favorite .far.fa-heart.empty::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0px;
+  right: 0px;
+  font-size: 1.5rem;
+  opacity: 1;
+  width: inherit;
+  height: inherit;
+}
+
+.btn.favorite .fas.fa-heart.full::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 1.5rem;
+  opacity: 0;
+}
+
+.menu-list .icon {
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 500ms;
+  transition: 500ms;
   width: 0px;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 
 .menu-list .icon .fas.fa-check-circle {
@@ -485,8 +547,8 @@ form .order__button {
   font-size: 1.3rem;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-transition: 800ms;
-  transition: 800ms;
+  -webkit-transition: 600ms;
+  transition: 600ms;
 }
 
 .menu-list .icon .fas.fa-check-circle::before {
@@ -604,7 +666,7 @@ form .order__button {
   margin: 0;
 }
 
-.banner i {
+.banner .fa-heart {
   font-size: 1.5rem;
   padding-right: 10px;
 }
@@ -779,29 +841,21 @@ section.instructions {
 }
 
 .restaurants__bloc__card__description {
-  border: 1px solid #F6F6F6 #000000;
-  padding-left: 10px;
-  padding-top: 10px;
+  padding-top: 13px;
+  padding-left: 12px;
   border-radius: 20px;
   position: relative;
 }
 
 .restaurants__bloc__card__description h3 {
   margin: 0px;
-  padding-bottom: 2px;
+  padding-bottom: 4px;
 }
 
 .restaurants__bloc__card__description p {
   margin: 0;
   font-weight: 300;
   font-size: 1.05rem;
-}
-
-.restaurants__bloc__card__description i.far.fa-heart {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 1.5rem;
 }
 
 /*page menu

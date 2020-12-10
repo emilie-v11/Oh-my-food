@@ -1,4 +1,4 @@
-// base for button 
+// base for main button
 @mixin button {
     border: none;
     border-radius: 25px;
@@ -28,3 +28,41 @@ form {
     filter: brightness(115%);
     @include box-shadow-darken;
  }
+
+ //button favorite with hearts icon
+ .btn.favorite {
+    background-color: $color-white;
+    border: 1px solid transparent; //transparent
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    width: 54px;
+    height: 54px;
+    @include center-icon;
+    padding: 0;
+    cursor: pointer;
+
+    .far.fa-heart.empty::before {
+        @include center-icon;
+        // position: absolute;
+        top: 0px;
+        right: 0px;
+        font-size: 1.5rem;
+        // z-index: 2;
+        opacity: 1;
+        width: inherit;
+        height: inherit;
+    }
+
+    .fas.fa-heart.full::before {
+        @include center-icon;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        font-size: 1.5rem;
+        opacity: 0;
+        // z-index: 1;
+        // display: none;
+        // visibility: hidden;
+    }
+}
