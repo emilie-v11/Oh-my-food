@@ -1,3 +1,5 @@
+//==================================================================
+//Main Button 
 // base for main button
 @mixin button {
     border: none;
@@ -7,8 +9,8 @@
     font-size: 1rem;
     margin-top: 15px;
     margin-bottom: 30px;
-    // background: linear-gradient($color-secondary, $color-primary);
     background: $color-linear-gradient;
+    cursor: pointer;
 }
 
 //button for order
@@ -29,40 +31,58 @@ form {
     @include box-shadow-darken;
  }
 
- //button favorite with hearts icon
- .btn.favorite {
-    background-color: $color-white;
-    border: 1px solid transparent; //transparent
-    position: absolute;
-    right: 10px;
-    bottom: 15px;
+//==================================================================
+//button favorite + Hearts Icon
+
+//Button ==============================================
+//Base for all .btn-favorite (homepage & menu's pages)
+.btn-favorite{
+    background: transparent;
+    border: 1px solid transparent;
     width: 54px;
     height: 54px;
     @include center-icon;
-    padding: 0;
     cursor: pointer;
+    padding: 0;
+}
 
-    .far.fa-heart.empty::before {
-        @include center-icon;
-        // position: absolute;
-        top: 0px;
-        right: 0px;
-        font-size: 1.5rem;
-        // z-index: 2;
-        opacity: 1;
-        width: inherit;
-        height: inherit;
-    }
+ // rules for .btn-favorite-resto (homepage)
+ .btn-favorite-resto {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+ }
 
-    .fas.fa-heart.full::before {
-        @include center-icon;
-        position: absolute;
-        top: 12px;
-        right: 12px;
-        font-size: 1.5rem;
-        opacity: 0;
-        // z-index: 1;
-        // display: none;
-        // visibility: hidden;
+// rules for .btn-favorite-menu (menu's pages)
+.btn-favorite-menu {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+
+// Heart Icon  =========================================
+//Base for all heart icon
+.fa-heart {
+    @include center-icon;
+    @include heart;
+}
+
+//rules for empty heart
+
+//rules for full heart
+.fas.fa-heart.full {
+    background: $color-linear-gradient;
+    transform: scale(0);
+    transition: 600ms linear;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    // add for safari otherwise the heart is transparent
+    &::before {
+        background: $color-linear-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        // color: $color-linear-gradient;
+        // background-clip: text;
     }
 }

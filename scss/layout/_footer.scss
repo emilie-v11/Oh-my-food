@@ -12,6 +12,7 @@
             font-family: $font-logo-title;
         }
     }
+
     &__links {
         @include reset-list;
         margin-bottom: 0;
@@ -19,8 +20,9 @@
             padding-right: 10px;
             &.fa-hands-helping {
                 font-size: 0.7rem;
-                }
+            }
         }
+        
         &__item {
             padding-bottom: 8px;
             font-size: 1rem;

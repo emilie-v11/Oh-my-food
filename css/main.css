@@ -35,6 +35,22 @@
   width: 100%;
 }
 
+.btn-favorite:hover .far.fa-heart.empty {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-favorite:hover .fas.fa-heart.full {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 .menu-list:hover {
   -webkit-transform: translate(0px);
           transform: translate(0px);
@@ -54,28 +70,6 @@
   opacity: 1;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-}
-
-.btn.favorite .far.fa-heart::before {
-  font-weight: normal;
-  -webkit-transition-property: font-weight, background-color;
-  transition-property: font-weight, background-color;
-  -webkit-transition: all 0.7s ease-out 0s;
-  transition: all 0.7s ease-out 0s;
-  -webkit-transition: opacity 800ms;
-  transition: opacity 800ms;
-}
-
-.btn.favorite:hover .far.fa-heart::before {
-  font-weight: bolder;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
-  /*!important*/
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-transition: opacity 800ms ease-in-out;
-  transition: opacity 800ms ease-in-out;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -456,6 +450,7 @@ form .order__button {
   margin-bottom: 30px;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
+  cursor: pointer;
   width: 190px;
   margin-top: 8px;
 }
@@ -468,12 +463,9 @@ form .order__button {
           box-shadow: 0px 5px 5px 0px #a6a6a6;
 }
 
-.btn.favorite {
-  background-color: #FFFFFF;
+.btn-favorite {
+  background: transparent;
   border: 1px solid transparent;
-  position: absolute;
-  right: 10px;
-  bottom: 15px;
   width: 54px;
   height: 54px;
   display: -webkit-box;
@@ -485,29 +477,23 @@ form .order__button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0;
   cursor: pointer;
+  padding: 0;
 }
 
-.btn.favorite .far.fa-heart.empty::before {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  top: 0px;
-  right: 0px;
-  font-size: 1.5rem;
-  opacity: 1;
-  width: inherit;
-  height: inherit;
+.btn-favorite-resto {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
 }
 
-.btn.favorite .fas.fa-heart.full::before {
+.btn-favorite-menu {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+
+.fa-heart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -518,10 +504,29 @@ form .order__button {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 0px;
+  right: 0px;
   font-size: 1.5rem;
-  opacity: 0;
+  width: inherit;
+  height: inherit;
+}
+
+.fas.fa-heart.full {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 600ms linear;
+  transition: 600ms linear;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fas.fa-heart.full::before {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .menu-list .icon {
@@ -622,6 +627,7 @@ form .order__button {
   margin-bottom: 30px;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
+  cursor: pointer;
   width: 220px;
 }
 
@@ -643,20 +649,9 @@ form .order__button {
   position: absolute;
   bottom: 0;
   margin: 0;
-  padding: 20px;
-  padding-top: 30px;
-  padding-bottom: 12px;
+  padding: 30px 20px 12px;
   background-color: #F6F6F6;
   border-radius: 40px 40px 0 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .banner h1 {
@@ -664,11 +659,7 @@ form .order__button {
   font-size: 1.8rem;
   font-weight: normal;
   margin: 0;
-}
-
-.banner .fa-heart {
-  font-size: 1.5rem;
-  padding-right: 10px;
+  position: relative;
 }
 
 header {
@@ -841,10 +832,8 @@ section.instructions {
 }
 
 .restaurants__bloc__card__description {
-  padding-top: 13px;
-  padding-left: 12px;
+  padding: 13px 0 0 12px;
   border-radius: 20px;
-  position: relative;
 }
 
 .restaurants__bloc__card__description h3 {
@@ -866,14 +855,25 @@ section.instructions {
 
 .menu {
   padding: 10px 15px 0 15px;
+  position: relative;
 }
 
 .menu h2 {
+  position: relative;
   text-transform: uppercase;
   font-weight: 300;
   font-size: 1rem;
   margin-bottom: 20px;
   padding-left: 5px;
+}
+
+.menu h2::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  width: 40px;
+  height: 3px;
+  background: #99E2D0;
 }
 
 .menu-list {

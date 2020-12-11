@@ -16,24 +16,19 @@
         position: absolute;
         bottom: 0;
         margin: 0;
-        padding: 20px;
-        padding-top: 30px;
-        padding-bottom: 12px;
+        padding: 30px 20px 12px;
         background-color: $color-light-gray;
         border-radius: 40px 40px 0 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
     }
     & h1 {
         font-family: $font-logo-title;
         font-size: 1.8rem;
         font-weight: normal;
         margin: 0;
-    }
-    & .fa-heart {
-        font-size: 1.5rem;
-        padding-right: 10px;
+        position: relative;
     }
 }
 

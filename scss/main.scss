@@ -95,10 +95,9 @@ section.instructions {
             }
 
             &__description {
-                padding-top: 13px;
-                padding-left: 12px;
+                padding: 13px 0 0 12px;
                 border-radius: 20px;
-                position: relative;
+                // position: relative;
 
                 & h3 {
                     margin: 0px;
@@ -116,29 +115,11 @@ section.instructions {
 }
 
 
-
-
-
-
-// :hover {
-//     // font-weight: bold;
-//     // color: linear-gradient($color-secondary, $color-primary);
-//     background: linear-gradient(#9356DC, #FF79DA);
-//     background-clip: text;
-//     -webkit-background-clip: text;
-//     color: transparent;
-// }
-
 // 2e coeur par dessous ? <i class="fas fa-heart heart-color"></i> ??
 
 //===================================================================================================
 /*page menu
 */
-
-
-
-//===============================
-
 
 //==================================================
 
@@ -149,14 +130,22 @@ section.instructions {
  //bloc menu : starter, main course, dessert.
 .menu {
     padding: 10px 15px 0 15px;
-    // background-color: $color-light-gray;
+    position: relative;
     & h2 {
+        position: relative;
         text-transform: uppercase;
         font-weight: 300;
         font-size: 1rem;
-        // margin-top: 0;
         margin-bottom: 20px;
         padding-left: 5px;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            width: 40px;
+            height: 3px;
+            background: $color-tertiary;
+        }
     }
 }
 

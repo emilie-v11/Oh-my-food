@@ -1,5 +1,33 @@
-// animation menus pages
-// animation for the Check, hover the menu-list :
+//animation spinner loading ============================================================
+//homepage
+
+
+
+
+//animation change heart's color with hover ============================================
+//homepage and menus' pages
+.btn-favorite:hover .far.fa-heart.empty {
+    background: $color-linear-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+}
+
+.btn-favorite:hover .fas.fa-heart.full {
+    // background-clip: text;
+    background: $color-linear-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1);
+}
+
+
+// progressive appearance of dishes ===================================================
+
+
+
+
+// animation for the Check, hover the menu-list ========================================
+//menus' pages
 .menu-list:hover {
     transform: translate(0px);
     & h3, .description {
@@ -16,33 +44,4 @@
     }
 }
 
-// animation homepage cards and main title menu pages
-//animation change heart's color with hover:
-.btn.favorite .far.fa-heart::before {
-    font-weight: normal;
-    transition-property: font-weight, background-color;
-    // transition-duration: 700ms ease;
-    transition: all 0.7s ease-out 0s;//linear
-    transition: opacity 800ms;
-}
-.btn.favorite:hover .far.fa-heart::before {
-    font-weight: bolder;
-    background: $color-linear-gradient;
 
-    /*!important*/
-    background-clip: text;  
-    -webkit-background-clip: text;
-    color: transparent;
-
-    transition: opacity 800ms ease-in-out; // regler la vitesse de remplissage
-    // -webkit-text-fill-color: transparent;
-}
-
-// animation menus pages
-// progressive appearance of dishes
-
-
-
-
-// animation homepage
-//animation spinner loading

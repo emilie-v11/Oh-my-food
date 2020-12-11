@@ -51,8 +51,11 @@
                 <img class="banner__img" src="../img/restaurants/small/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo d'un plat">
                 <div class="banner__heading">
                     <h1>La palette du goût</h1>
-                    <i class="fas fa-heart empty"></i>
-                    <i class="far fa-heart full"></i>
+                    <!--icon hearts for favorite-->
+                    <button class="btn-favorite btn-favorite-menu" aria-label="select as favorite">
+                        <i class="far fa-heart empty" aria-hidden="true"></i>
+                        <i class="fas fa-heart full" aria-hidden="true"></i>
+                    </button>
                 </div>
             </section>
             <!-- end banner -->
@@ -61,7 +64,7 @@
             <div class="restaurant-menu">
                 
                 <!-- section menu's starters -->
-                <section class="menu">
+                <section class="menu starters">
                     <!-- title starters -->
                     <h2>Entrées</h2>
 
@@ -102,7 +105,7 @@
                 <!-- end section starters -->
                 
                 <!-- section main-course -->
-                <section class="menu">
+                <section class="menu main-courses">
                     <!-- title main course -->
                     <h2>Plats</h2>
 
@@ -144,7 +147,7 @@
                 <!-- end section main course -->
                 
                 <!-- Section dessert -->
-                <section class="menu">
+                <section class="menu desserts">
                     <!-- title dessert -->
                     <h2>Desserts</h2>
                     
