@@ -12,8 +12,6 @@ body {
     outline: none;
 }
 
-
-
 a {
     @include reset-link;
     color: $color-dark-text;

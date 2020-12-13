@@ -5,3 +5,19 @@
     padding-bottom: 40px;
     @include auto-center;
 }
+
+//responsive
+.omf-homepage, main, form {
+    @include tablet-only {
+        margin: auto;
+    }
+    
+}
+
+section {
+    @include tablet-only {
+        margin: auto;
+        max-width: 1200px;
+        // max-width: 1440px;
+    }
+}

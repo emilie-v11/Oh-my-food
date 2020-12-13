@@ -1,0 +1,25 @@
+//Media Queries Variables
+
+$breakpoint-small: 600px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+//Media Queries Mixins
+
+@mixin small-only {
+    @media only screen and (min-width: $breakpoint-small) {
+        @content;
+    }
+}
+ 
+@mixin tablet-only {
+    @media only screen and (min-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+@mixin desktop-only {
+    @media only screen and (min-width: $breakpoint-desktop) {
+        @content;
+    }
+}

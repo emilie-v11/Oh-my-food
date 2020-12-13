@@ -51,6 +51,32 @@
           transform: scale(1);
 }
 
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
 .menu-list:hover {
   -webkit-transform: translate(0px);
           transform: translate(0px);
@@ -702,9 +728,44 @@ header omf homepage
   margin-right: auto;
 }
 
-.footer-nav {
+@media only screen and (min-width: 768px) {
+  .omf-homepage, main, form {
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  section {
+    margin: auto;
+    max-width: 1200px;
+  }
+}
+
+footer {
   background-color: #353535;
+}
+
+@media only screen and (min-width: 768px) {
+  footer {
+    width: 100%;
+    padding: 1.3rem 1.3rem;
+  }
+}
+
+.footer-nav {
   padding: 1.3rem 1.3rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+  }
 }
 
 .footer-nav__logo {
@@ -716,6 +777,12 @@ header omf homepage
   font-size: 1.1rem;
   color: #FFFFFF;
   font-family: "Shrikhand", cursive;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-nav__logo a {
+    font-size: 2rem;
+  }
 }
 
 .footer-nav__links {
@@ -745,10 +812,39 @@ header omf homepage
 /* 
     Review Thomas:
         1. instructions
-        2. le mettre soit dans le dossier components, soit dans le dossier layout
+        2. le mettre soit dans le dossier components, 
+        soit dans le dossier layout
  */
 section.instructions {
   padding: 1.3rem 1.3rem;
+}
+
+@media only screen and (min-width: 768px) {
+  section.instructions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    max-width: 1175px;
+    padding: 1.3rem 0;
+    padding-left: 0px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .instructions__heading {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .instructions__heading {
+    margin: 2rem auto;
+  }
 }
 
 .instructions__list {
@@ -756,9 +852,32 @@ section.instructions {
   margin: 0;
 }
 
+@media only screen and (min-width: 1024px) {
+  .instructions__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 .instructions__list li {
   background-color: #F6F6F6;
   padding-left: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .instructions__list li {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .instructions__list li {
+    max-width: 300px;
+  }
 }
 
 .instructions__list li:hover {
@@ -792,13 +911,57 @@ section.instructions {
   background-color: #F6F6F6;
 }
 
+@media only screen and (min-width: 768px) {
+  .restaurants {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1.3rem 0;
+  }
+}
+
+.restaurants__heading {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .restaurants__heading {
+    text-align: center;
+    margin: 2rem auto;
+  }
+}
+
 .restaurants__bloc {
   padding-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .restaurants__bloc {
+    padding-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 1.5rem 1.5rem;
+  }
 }
 
 .restaurants__bloc__card {
   width: auto;
-  height: 15.5rem;
+  height: 250px;
+  max-width: 500px;
+  max-height: 300px;
   background: white;
   border-radius: 1rem;
   overflow: hidden;
@@ -806,6 +969,30 @@ section.instructions {
   margin-bottom: 1.1rem;
   -webkit-box-shadow: #d9d9d9 0px 5px 5px 0px;
           box-shadow: #d9d9d9 0px 5px 5px 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 600px) {
+  .restaurants__bloc__card {
+    margin: 2rem auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .restaurants__bloc__card {
+    width: 45%;
+    max-width: 500px;
+    margin: 1rem auto;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .restaurants__bloc__card {
+    margin: 2rem 1.5rem;
+    max-width: 500px;
+    height: 300px;
+  }
 }
 
 .restaurants__bloc__card img {
@@ -814,7 +1001,27 @@ section.instructions {
   -o-object-fit: cover;
      object-fit: cover;
   max-width: 100%;
+  -o-object-position: bottom;
+     object-position: bottom;
   z-index: 1;
+}
+
+@media only screen and (min-width: 600px) {
+  .restaurants__bloc__card img {
+    -o-object-position: center 60%;
+       object-position: center 60%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .restaurants__bloc__card img {
+    height: 220px;
+  }
+}
+
+.restaurants__bloc__card img.img-2 {
+  -o-object-position: center 60%;
+     object-position: center 60%;
 }
 
 .restaurants__bloc__card span.new {
