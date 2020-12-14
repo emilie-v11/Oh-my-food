@@ -1,17 +1,5 @@
 //==================================================================
-//Main Button 
-// base for main button
-@mixin button {
-    border: none;
-    border-radius: 25px;
-    padding: 15px;
-    color: $color-white;
-    font-size: 1rem;
-    margin-top: 15px;
-    margin-bottom: 30px;
-    background: $color-linear-gradient;
-    cursor: pointer;
-}
+//Main Button
 
 //button for order
 form { 
@@ -32,18 +20,12 @@ form {
  }
 
 //==================================================================
-//button favorite + Hearts Icon
+//Button Favorite + Hearts Icon
 
 //Button ==============================================
 //Base for all .btn-favorite (homepage & menu's pages)
 .btn-favorite{
-    background: transparent;
-    border: 1px solid transparent;
-    width: 54px;
-    height: 54px;
-    @include center-icon;
-    cursor: pointer;
-    padding: 0;
+    @include btn-icon;
 }
 
  // rules for .btn-favorite-resto (homepage)

@@ -1,25 +1,3 @@
-// header
-header {
-    padding: 1.3rem 1.3rem;
-    padding-bottom: 8px;
-    text-align: center;
-    // @include header-shadow;
-    // position: relative;
-    img.header__brand-logo {
-        width: 50%;
-        max-width: 300px;
-    }
-
-    //arrow back previous page
-    .fa-arrow-left {
-    // position: absolute;
-    float: left;
-    left: 20px;
-    top: 25px;
-    font-size: 1.3rem;
-    }
-}
-
 /*
 header omf homepage
 -> add relative position & box-shadow
@@ -28,8 +6,45 @@ header omf homepage
 .omf-homepage header{
     position: relative;
     @include header-shadow;
-    & .back-home {
+    & .btn.back-home {
         display: none;
     }
 }
+
+// header
+header {
+    padding: 1.3rem 1.3rem;
+    padding-bottom: 8px;
+    text-align: center;
+
+    img.header__brand-logo {
+        width: 50%;
+        max-width: 300px;
+        position: relative;
+    }
+
+    //arrow back previous page
+    .btn.back-home {
+        @include btn-icon;
+        position: absolute;
+        left: 6px;
+        top: 6px;
+        @include small-only {
+            left: 6px;
+            top: 6px;
+        }
+
+        .fa-arrow-left {
+            position: absolute;
+            @include center-icon;
+            font-size: 1.3rem;
+
+            @include small-only {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+
     
