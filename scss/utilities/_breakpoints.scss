@@ -4,8 +4,8 @@ $breakpoint-small: 600px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
 
-//Media Queries Mixins
 
+//Media Queries Mixins
 @mixin small-only {
     @media only screen and (min-width: $breakpoint-small) {
         @content;
@@ -23,3 +23,7 @@ $breakpoint-desktop: 1024px;
         @content;
     }
 }
+
+
+//variable for max-width of sections in the desktop version
+$max-width-sections: 1440px; //1200px

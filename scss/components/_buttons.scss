@@ -58,6 +58,12 @@ form {
     position: absolute;
     right: 10px;
     top: 20px;
+
+    @include small-only {
+        position: relative;
+        top: 0px;
+        right: 0px;
+    }
 }
 
 // Heart Icon  =========================================

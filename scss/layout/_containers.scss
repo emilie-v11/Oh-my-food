@@ -17,7 +17,6 @@
 section {
     @include tablet-only {
         margin: auto;
-        max-width: 1200px;
-        // max-width: 1440px;
+        // max-width: $max-width-sections;
     }
 }

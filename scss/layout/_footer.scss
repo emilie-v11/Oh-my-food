@@ -14,8 +14,7 @@ footer {
     @include tablet-only {
         display: flex;
 	    justify-content: space-around;
-        // max-width: 1440px;
-        max-width: 1200px;
+        max-width: $max-width-sections;
 	    margin: auto;
     }
     
@@ -26,8 +25,9 @@ footer {
             font-size: 1.1rem;
             color: $color-white;
             font-family: $font-logo-title;
+
             @include tablet-only {
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
         }
     }

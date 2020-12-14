@@ -119,8 +119,13 @@ section.instructions {
             margin: auto;
             justify-content: center;
             margin: 1.5rem 1.5rem;
-
         }
+
+        @include desktop-only {
+            max-width: $max-width-sections;
+            @include auto-center;
+        }
+
         &__card {
             width: auto;
             height: 250px;
@@ -219,10 +224,30 @@ section.instructions {
     background-color: $color-light-gray;
 }
 
+.restaurant-menu {
+    @include desktop-only {
+        display: flex;
+        margin: 1rem auto;
+        max-width: $max-width-sections;
+    }
+}
+
  //bloc menu : starter, main course, dessert.
 .menu {
     padding: 10px 15px 0 15px;
-    position: relative;
+    // position: relative;
+
+    @include small-only {
+        @include auto-center;
+        margin: 1rem auto;
+        padding: 0;
+    }
+
+    @include desktop-only {
+        margin: 1rem 1rem;
+        width: 100%;
+    }
+
     & h2 {
         position: relative;
         text-transform: uppercase;
@@ -230,6 +255,16 @@ section.instructions {
         font-size: 1rem;
         margin-bottom: 20px;
         padding-left: 5px;
+
+        @include small-only {
+            max-width: 500px;
+            @include auto-center;
+        }
+
+        @include tablet-only {
+            max-width: 600px;
+        }
+
         &::before {
             content: "";
             position: absolute;
@@ -244,12 +279,24 @@ section.instructions {
 // menu list
 .menu-list{
     width: 100%;
+    max-width: 500px;
     display: flex;
     background: $color-white;
     border-radius: 15px; //20px ?
     @include box-shadow;
     margin: 1rem auto;
+    // @include auto-center;
     overflow: hidden;
+    @include auto-center;
+
+    @include tablet-only {
+        max-width: 600px;
+    }
+
+    @include desktop-only {
+        max-width: 500px;
+    }
+
     &__item {
         position: relative;
         width: 100%;
