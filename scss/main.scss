@@ -43,7 +43,6 @@ section.instructions {
     position: relative;
     @extend .bloc-list;
     margin: 0;
-    // flex-direction: column;
 
     @include desktop-only {
         flex-direction: row;

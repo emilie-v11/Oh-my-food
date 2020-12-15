@@ -22,28 +22,6 @@ header {
         max-width: 300px;
         position: relative;
     }
-
-    //arrow back previous page
-    .btn.back-home {
-        @include btn-icon;
-        position: absolute;
-        left: 6px;
-        top: 6px;
-        @include small-only {
-            left: 6px;
-            top: 6px;
-        }
-
-        .fa-arrow-left {
-            position: absolute;
-            @include center-icon;
-            font-size: 1.3rem;
-
-            @include small-only {
-                font-size: 2rem;
-            }
-        }
-    }
 }
 
 

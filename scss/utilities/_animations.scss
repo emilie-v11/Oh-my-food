@@ -23,37 +23,52 @@
 
 // progressive appearance of dishes ===================================================
 
-@keyframes slideUp{
+.menu {
+    &.starters {
+        animation: slide-up 2s ease-in-out;
+    }
+    &.main-courses {
+        animation: slide-up 3s ease-in-out;
+    }
+    &.desserts {
+        animation: slide-up 4s ease-in-out;
+    }
+    
+}
+
+@keyframes slide-up{
     0%{ 
-        transform: translateY(20px);
+        transform: translateY(100px);
+        transition-delay: 0 1s 3s;
         opacity: 0;
     }
     100% {
-        transform: translateY(0px);
+        transform: translateY(0); 
         opacity: 1;
     }
 }
-
-
-
 
 
 // animation for the Check, hover the menu-list ========================================
 //menus' pages
 .menu-list:hover {
     transform: translate(0px);
+
     & h3, .description {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
+
     & .icon {
         width: 75px;
+        transition: 450ms ease-in-out;
+
         & .fas.fa-check-circle {
+            transition: 450ms ease-in-out;
             opacity: 1;
-            transform: rotate(360deg);
+            transform: rotate(-360deg);
         }
     }
 }
-
 

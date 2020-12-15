@@ -51,28 +51,47 @@
           transform: scale(1);
 }
 
-@-webkit-keyframes slideUp {
+.menu.starters {
+  -webkit-animation: slide-up 2s ease-in-out;
+          animation: slide-up 2s ease-in-out;
+}
+
+.menu.main-courses {
+  -webkit-animation: slide-up 3s ease-in-out;
+          animation: slide-up 3s ease-in-out;
+}
+
+.menu.desserts {
+  -webkit-animation: slide-up 4s ease-in-out;
+          animation: slide-up 4s ease-in-out;
+}
+
+@-webkit-keyframes slide-up {
   0% {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    -webkit-transition-delay: 0 1s 3s;
+            transition-delay: 0 1s 3s;
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 1;
   }
 }
 
-@keyframes slideUp {
+@keyframes slide-up {
   0% {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    -webkit-transition-delay: 0 1s 3s;
+            transition-delay: 0 1s 3s;
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 1;
   }
 }
@@ -90,12 +109,16 @@
 
 .menu-list:hover .icon {
   width: 75px;
+  -webkit-transition: 450ms ease-in-out;
+  transition: 450ms ease-in-out;
 }
 
 .menu-list:hover .icon .fas.fa-check-circle {
+  -webkit-transition: 450ms ease-in-out;
+  transition: 450ms ease-in-out;
   opacity: 1;
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -479,10 +502,11 @@ form .order__button {
   cursor: pointer;
   width: 190px;
   margin-top: 8px;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
 }
 
-.jumbotron__button:hover,
-.order__button:hover {
+form .order__button:hover {
   -webkit-filter: brightness(115%);
           filter: brightness(115%);
   -webkit-box-shadow: 0px 5px 5px 0px #a6a6a6;
@@ -550,8 +574,8 @@ form .order__button {
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-transition: 600ms linear;
-  transition: 600ms linear;
+  -webkit-transition: 600ms ease-in-out;
+  transition: 600ms ease-in-out;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -561,6 +585,54 @@ form .order__button {
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.btn.back-home {
+  background: transparent;
+  border: 1px solid transparent;
+  width: 54px;
+  height: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  left: 6px;
+  top: 6px;
+}
+
+@media only screen and (min-width: 600px) {
+  .btn.back-home {
+    left: 6px;
+    top: 6px;
+  }
+}
+
+.btn.back-home .fa-arrow-left {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.3rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .btn.back-home .fa-arrow-left {
+    font-size: 2rem;
+  }
 }
 
 .menu-list .icon {
@@ -663,6 +735,13 @@ form .order__button {
   background: linear-gradient(#FF79DA, #9356DC);
   cursor: pointer;
   width: 220px;
+}
+
+.jumbotron__button:hover {
+  -webkit-filter: brightness(115%);
+          filter: brightness(115%);
+  -webkit-box-shadow: 0px 5px 5px 0px #a6a6a6;
+          box-shadow: 0px 5px 5px 0px #a6a6a6;
 }
 
 .banner {
@@ -805,54 +884,6 @@ header img.header__brand-logo {
   width: 50%;
   max-width: 300px;
   position: relative;
-}
-
-header .btn.back-home {
-  background: transparent;
-  border: 1px solid transparent;
-  width: 54px;
-  height: 54px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  cursor: pointer;
-  padding: 0;
-  position: absolute;
-  left: 6px;
-  top: 6px;
-}
-
-@media only screen and (min-width: 600px) {
-  header .btn.back-home {
-    left: 6px;
-    top: 6px;
-  }
-}
-
-header .btn.back-home .fa-arrow-left {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 1.3rem;
-}
-
-@media only screen and (min-width: 600px) {
-  header .btn.back-home .fa-arrow-left {
-    font-size: 2rem;
-  }
 }
 
 .order {

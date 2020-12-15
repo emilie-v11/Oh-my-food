@@ -1,6 +1,6 @@
 //==================================================================
 //Main Button
-
+//Menus' pages
 //button for order
 form { 
     text-align: center;
@@ -8,16 +8,17 @@ form {
         @include button;
         width: 190px;
         margin-top: 8px;
+        transition-duration: 200ms;
+
+        // darken the shadow-box and 
+        //brightness the color for the linear-gradient button
+        &:hover {
+            filter: brightness(115%);
+            @include box-shadow-darken;
+        }
     }
 }
 
-// darken the shadow-box and 
-//brightness the color for the linear-gradient button
-.jumbotron__button:hover,
-.order__button:hover {
-    filter: brightness(115%);
-    @include box-shadow-darken;
- }
 
 //==================================================================
 //Button Favorite + Hearts Icon
@@ -61,7 +62,8 @@ form {
 .fas.fa-heart.full {
     background: $color-linear-gradient;
     transform: scale(0);
-    transition: 600ms linear;
+    transition: 600ms ease-in-out;
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -74,3 +76,26 @@ form {
         // background-clip: text;
     }
 }
+//======================================================
+//button
+    //arrow back previous page
+    .btn.back-home {
+        @include btn-icon;
+        position: absolute;
+        left: 6px;
+        top: 6px;
+        @include small-only {
+            left: 6px;
+            top: 6px;
+        }
+
+        .fa-arrow-left {
+            position: absolute;
+            @include center-icon;
+            font-size: 1.3rem;
+
+            @include small-only {
+            font-size: 2rem;
+            }
+        }
+    }

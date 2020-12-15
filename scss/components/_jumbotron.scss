@@ -19,5 +19,12 @@
     &__button {
         @include button;
         width: 220px;
+
+        // darken the shadow-box and 
+        //brightness the color for the linear-gradient button
+        &:hover {
+            filter: brightness(115%);
+            @include box-shadow-darken;
+        }
     }
 }
