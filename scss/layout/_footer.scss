@@ -13,9 +13,9 @@ footer {
 
     @include tablet-only {
         display: flex;
-	    justify-content: space-around;
+	    justify-content: space-around; //space-between
         max-width: $max-width-sections;
-	    margin: auto;
+        margin: auto;
     }
     
     &__logo {
