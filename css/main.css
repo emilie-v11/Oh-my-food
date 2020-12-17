@@ -56,12 +56,12 @@
   opacity: 1;
   -webkit-animation: bg-loader 3s both;
           animation: bg-loader 3s both;
-  background-color: white;
+  background-color: #FFFFFF;
 }
 
 .container .loader__letter {
   color: #000000;
-  font-size: 5rem;
+  font-size: 2rem;
   font-family: 'Shrikhand', cursive;
   letter-spacing: 10px;
   margin-bottom: 150px;
@@ -113,11 +113,11 @@
 
 @-webkit-keyframes bg-loader {
   0% {
-    opacity: 0.9;
+    opacity: 1;
     z-index: 99;
   }
   99% {
-    opacity: 0.9;
+    opacity: 1;
     z-index: 99;
   }
   100% {
@@ -128,11 +128,11 @@
 
 @keyframes bg-loader {
   0% {
-    opacity: 0.9;
+    opacity: 1;
     z-index: 99;
   }
   99% {
-    opacity: 0.9;
+    opacity: 1;
     z-index: 99;
   }
   100% {

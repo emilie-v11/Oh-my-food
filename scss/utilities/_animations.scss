@@ -13,12 +13,12 @@
     cursor: initial;
     opacity: 1;
     animation: bg-loader 3s both;//both
-    background-color: white;
+    background-color: $color-white;
 
     & .loader {
         &__letter {
             color: $color-dark-text;
-            font-size: 5rem;
+            font-size: 2rem;
             font-family: 'Shrikhand', cursive;
             letter-spacing: 10px;
             margin-bottom: 150px;
@@ -56,11 +56,11 @@
 
 @keyframes bg-loader {
     0% {
-        opacity: 0.9;
+        opacity: 1;//0.9
         z-index: 99;
     }
     99% {
-        opacity: 0.9;
+        opacity: 1;//0.9
         z-index: 99;
     }
     100% {
