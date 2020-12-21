@@ -206,18 +206,18 @@
 }
 
 .menu.starters {
-  -webkit-animation: slide-up 2s ease-in-out;
-          animation: slide-up 2s ease-in-out;
+  -webkit-animation: slide-up 1000ms ease-in-out;
+          animation: slide-up 1000ms ease-in-out;
 }
 
 .menu.main-courses {
-  -webkit-animation: slide-up 3s ease-in-out;
-          animation: slide-up 3s ease-in-out;
+  -webkit-animation: slide-up 1500ms ease-in-out;
+          animation: slide-up 1500ms ease-in-out;
 }
 
 .menu.desserts {
-  -webkit-animation: slide-up 4s ease-in-out;
-          animation: slide-up 4s ease-in-out;
+  -webkit-animation: slide-up 2000ms ease-in-out;
+          animation: slide-up 2000ms ease-in-out;
 }
 
 @-webkit-keyframes slide-up {
@@ -259,13 +259,13 @@
 
 .menu-list:hover .icon {
   width: 75px;
-  -webkit-transition: 450ms ease-in-out;
-  transition: 450ms ease-in-out;
+  -webkit-transition: 350ms ease-in-out;
+  transition: 350ms ease-in-out;
 }
 
 .menu-list:hover .icon .fas.fa-check-circle {
-  -webkit-transition: 450ms ease-in-out;
-  transition: 450ms ease-in-out;
+  -webkit-transition: 350ms ease-in-out;
+  transition: 350ms ease-in-out;
   opacity: 1;
   -webkit-transform: rotate(-360deg);
           transform: rotate(-360deg);
@@ -724,8 +724,8 @@ form .order__button:hover {
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-transition: 600ms ease-in-out;
-  transition: 600ms ease-in-out;
+  -webkit-transition: 350ms ease-in-out;
+  transition: 350ms ease-in-out;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -915,7 +915,7 @@ form .order__button:hover {
 
 @media only screen and (min-width: 1024px) {
   .banner {
-    height: 66vh;
+    height: 500px;
     max-width: none;
   }
 }
@@ -941,7 +941,7 @@ form .order__button:hover {
 
 @media only screen and (min-width: 1024px) {
   .banner__img {
-    height: 60vh;
+    height: 450px;
     width: 100%;
   }
 }
@@ -981,7 +981,6 @@ form .order__button:hover {
 
 @media only screen and (min-width: 1024px) {
   .banner__heading {
-    border-radius: 0px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -993,6 +992,7 @@ form .order__button:hover {
   font-weight: normal;
   margin: 0;
   position: relative;
+  max-width: 90%;
 }
 
 @media only screen and (min-width: 600px) {

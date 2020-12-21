@@ -15,7 +15,7 @@
     }
 
     @include desktop-only {
-        height: 66vh;// 40vh 50vh 70vh
+        height: 500px;// 66vh 480px
         max-width: none;
     }
 
@@ -33,7 +33,7 @@
         }
 
         @include desktop-only {
-            height: 60vh;// 40vh 50vh 70vh
+            height: 450px;// 60vh 
             width: 100%;
         }
     }
@@ -57,7 +57,7 @@
         }
 
         @include desktop-only {
-            border-radius: 0px;
+            // border-radius: 0px;
             @include auto-center;
         }
     }
@@ -67,6 +67,7 @@
         font-weight: normal;
         margin: 0;
         position: relative;
+        max-width: 90%;
 
         @include small-only {
             @include center-icon;

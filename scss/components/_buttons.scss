@@ -62,8 +62,7 @@ form {
 .fas.fa-heart.full {
     background: $color-linear-gradient;
     transform: scale(0);
-    transition: 600ms ease-in-out;
-
+    transition: 350ms ease-in-out; //600ms
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 

@@ -1,10 +1,10 @@
-//animation spinner loading ============================================================
+//animation loader loading ============================================================
 //homepage
 
 .omf-homepage {
     z-index: -1;
-
 }
+
 .container {
     position: fixed;
     @include center-icon;
@@ -95,11 +95,6 @@
 }
 
 
-
-
-
-
-
 //animation change heart's color with hover ============================================
 //homepage and menus' pages
 .btn-favorite:hover .far.fa-heart.empty {
@@ -121,13 +116,13 @@
 
 .menu {
     &.starters {
-        animation: slide-up 2s ease-in-out;
+        animation: slide-up 1000ms ease-in-out;// 2s
     }
     &.main-courses {
-        animation: slide-up 3s ease-in-out;
+        animation: slide-up 1500ms ease-in-out;// 3s
     }
     &.desserts {
-        animation: slide-up 4s ease-in-out;
+        animation: slide-up 2000ms ease-in-out;// 4s
     }
     
 }
@@ -157,10 +152,10 @@
 
     & .icon {
         width: 75px;
-        transition: 450ms ease-in-out;
+        transition: 350ms ease-in-out;//450ms
 
         & .fas.fa-check-circle {
-            transition: 450ms ease-in-out;
+            transition: 350ms ease-in-out;//450ms
             opacity: 1;
             transform: rotate(-360deg);
         }
