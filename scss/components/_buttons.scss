@@ -1,6 +1,8 @@
 //==================================================================
 //Main Button
 //Menus' pages
+
+
 //button for order
 form { 
     text-align: center;
@@ -49,32 +51,7 @@ form {
     }
 }
 
-// Heart Icon  =========================================
-//Base for all heart icon
-.fa-heart {
-    @include center-icon;
-    @include heart;
-}
 
-//rules for empty heart
-
-//rules for full heart
-.fas.fa-heart.full {
-    background: $color-linear-gradient;
-    transform: scale(0);
-    transition: 350ms ease-in-out; //600ms
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    // add for safari otherwise the heart is transparent
-    &::before {
-        background: $color-linear-gradient;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        // color: $color-linear-gradient;
-        // background-clip: text;
-    }
-}
 //======================================================
 //button
     //arrow back previous page

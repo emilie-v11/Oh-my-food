@@ -1,0 +1,44 @@
+ //bloc menu : starter, main course, dessert.
+ 
+ .menu {
+    padding: 10px 15px 0 15px;
+    // position: relative;
+
+    @include small-only {
+        @include auto-center;
+        margin: 1rem auto;
+        padding: 0;
+    }
+
+    @include large-only {
+        margin: 1rem 1rem;
+        width: 100%;
+    }
+
+    & h2 {
+        position: relative;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 1rem;
+        margin-bottom: 20px;
+        padding-left: 5px;
+
+        @include small-only {
+            max-width: 500px;
+            @include auto-center;
+        }
+
+        @include medium-only {
+            max-width: 600px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            width: 40px;
+            height: 3px;
+            background: $color-tertiary;
+        }
+    }
+}

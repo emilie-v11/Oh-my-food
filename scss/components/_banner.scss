@@ -10,11 +10,11 @@
         height: 350px;
     }
 
-    @include tablet-only {
+    @include medium-only {
         height: 430px;
     }
 
-    @include desktop-only {
+    @include large-only {
         height: 500px;// 66vh 480px
         max-width: none;
     }
@@ -28,11 +28,11 @@
             height: 330px;
         }
 
-        @include tablet-only {
+        @include medium-only {
             height: 400px;
         }
 
-        @include desktop-only {
+        @include large-only {
             height: 450px;// 60vh 
             width: 100%;
         }
@@ -56,7 +56,7 @@
             padding: 1rem 3rem 0.8rem;
         }
 
-        @include desktop-only {
+        @include large-only {
             // border-radius: 0px;
             @include auto-center;
         }

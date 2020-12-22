@@ -1,8 +1,11 @@
 //Media Queries Variables
 
+//large phone
 $breakpoint-small: 600px;
-$breakpoint-tablet: 768px;
-$breakpoint-desktop: 1024px;
+//tablet
+$breakpoint-medium: 768px;
+//desktop
+$breakpoint-large: 1024px;
 
 
 //Media Queries Mixins
@@ -12,18 +15,17 @@ $breakpoint-desktop: 1024px;
     }
 }
  
-@mixin tablet-only {
-    @media only screen and (min-width: $breakpoint-tablet) {
+@mixin medium-only {
+    @media only screen and (min-width: $breakpoint-medium) {
         @content;
     }
 }
 
-@mixin desktop-only {
-    @media only screen and (min-width: $breakpoint-desktop) {
+@mixin large-only {
+    @media only screen and (min-width: $breakpoint-large) {
         @content;
     }
 }
 
-
-//variable for max-width of sections in the desktop version
+//variable for max-width of sections in the large version
 $max-width-sections: 1440px; //1200px

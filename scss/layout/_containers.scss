@@ -1,22 +1,32 @@
+//responsive
+.omf-homepage, main, form {
+    @include medium-only {
+        margin: auto;
+    }
+}
+
+section {
+    @include medium-only {
+        margin: auto;
+    }
+}
+
+.omf-menu main {
+    background-color: $color-light-gray;
+}
+
+.restaurant-menu {
+    @include large-only {
+        display: flex;
+        margin: 1rem auto;
+        max-width: $max-width-sections;
+    }
+}
+
 //Pages menu 1,2,3,4
 //bloc button order : center and padding
 .order {
     padding: 30px;
     padding-bottom: 40px;
     @include auto-center;
-}
-
-//responsive
-.omf-homepage, main, form {
-    @include tablet-only {
-        margin: auto;
-    }
-    
-}
-
-section {
-    @include tablet-only {
-        margin: auto;
-        // max-width: $max-width-sections;
-    }
 }

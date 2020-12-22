@@ -1,0 +1,38 @@
+.restaurants {
+    @include padding-bloc;
+    background-color: $color-light-gray;
+
+    @include medium-only {
+        display: flex;
+    	flex-direction: column;
+    	padding: 1.3rem 0;
+    }
+
+    &__heading {
+        width: 100%;
+
+        @include small-only {
+            text-align: center;
+            margin: 2rem auto;
+        }
+    }
+
+    &__bloc {
+        padding-bottom: 30px;
+        @include auto-center;
+
+        @include medium-only {
+            padding-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+            justify-content: center;
+            margin: 1.5rem 1.5rem;
+        }
+
+        @include large-only {
+            max-width: $max-width-sections;
+            @include auto-center;
+        }
+    }
+}

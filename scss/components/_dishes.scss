@@ -1,0 +1,59 @@
+//menus's pages
+// dishes cards
+
+.menu-list{
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    background: $color-white;
+    border-radius: 15px; //20px ?
+    @include box-shadow;
+    margin: 1rem auto;
+    // @include auto-center;
+    overflow: hidden;
+    @include auto-center;
+
+    @include medium-only {
+        max-width: 600px;
+    }
+
+    @include large-only {
+        max-width: 500px;
+    }
+
+    &__item {
+        position: relative;
+        width: 100%;
+        padding: 12px; // ajuster la taille
+        overflow: hidden;
+        // text-overflow: ellipsis;
+        & h3 {
+            width: 83%; //82%
+            font-weight: 500; //600 ?
+            font-size: 1.1rem;
+            margin: 0;
+            line-height: 25px;
+        }
+        & .description {
+            font-size: 0.95rem; //1rem ?
+            // padding-right: 20px;
+            width: 83%; //82%
+            // white-space: nowrap;
+            // overflow: hidden;
+            // text-overflow: ellipsis;
+            margin: 0;
+            line-height: 20px; //18px
+            font-weight: 300; //lighter ? 
+        }
+        & .price {
+            // float: right;
+            position: absolute;
+            right: 20px;
+            bottom: 10px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            line-height: 20px; //18px
+            margin: 0;
+        }
+    }
+}
