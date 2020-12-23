@@ -218,28 +218,28 @@
 }
 
 .menu.starters {
-  -webkit-animation: slide-up 1600ms ease-in-out;
-          animation: slide-up 1600ms ease-in-out;
+  -webkit-animation: slide-up 1200ms ease-in-out;
+          animation: slide-up 1200ms ease-in-out;
 }
 
 .menu.main-courses {
-  -webkit-animation: slide-up 2000ms ease-in-out;
-          animation: slide-up 2000ms ease-in-out;
+  -webkit-animation: slide-up 1500ms ease-in-out;
+          animation: slide-up 1500ms ease-in-out;
 }
 
 .menu.desserts {
-  -webkit-animation: slide-up 2400ms ease-in-out;
-          animation: slide-up 2400ms ease-in-out;
+  -webkit-animation: slide-up 1800ms ease-in-out;
+          animation: slide-up 1800ms ease-in-out;
 }
 
 @-webkit-keyframes slide-up {
   0% {
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
     opacity: 0;
   }
   60% {
-    opacity: 0.6;
+    opacity: 0;
   }
   100% {
     -webkit-transform: translateY(0);
@@ -250,12 +250,12 @@
 
 @keyframes slide-up {
   0% {
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
     opacity: 0;
   }
   60% {
-    opacity: 0.6;
+    opacity: 0;
   }
   100% {
     -webkit-transform: translateY(0);
@@ -990,7 +990,7 @@ section.instructions {
   left: -12PX;
   border-radius: 50%;
   border: 1px solid #9356DC;
-  padding: 4px 8px;
+  padding: 5px 8px;
   background-color: #9356DC;
   font-size: 0.8rem;
   color: #FFFFFF;
@@ -1079,8 +1079,8 @@ section.instructions {
   right: 20px;
   padding: 5px 10px;
   border-radius: 2px;
-  font-size: 0.9rem;
-  font-weight: bold;
+  font-size: 0.85rem;
+  font-weight: 500;
   color: #2c9c81;
 }
 

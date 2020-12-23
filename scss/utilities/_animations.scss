@@ -130,24 +130,24 @@
 
 .menu {
     &.starters {
-        animation: slide-up 1600ms ease-in-out;// 2s
+        animation: slide-up 1200ms ease-in-out;// 2s
     }
     &.main-courses {
-        animation: slide-up 2000ms ease-in-out;// 3s
+        animation: slide-up 1500ms ease-in-out;// 3s
     }
     &.desserts {
-        animation: slide-up 2400ms ease-in-out;// 4s
+        animation: slide-up 1800ms ease-in-out;// 4s
     }
     
 }
 
 @keyframes slide-up{
     0% { 
-        transform: translateY(100px);
+        transform: translateY(50px); //100px
         opacity: 0;
     }
     60% {
-        opacity: 0.6;
+        opacity: 0;
     }
 
     100% {
