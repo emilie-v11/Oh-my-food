@@ -8,7 +8,7 @@ form {
     text-align: center;
     & .order__button {
         @include button;
-        width: 190px;
+        width: 187px;
         margin-top: 8px;
         transition-duration: 200ms;
 
@@ -32,11 +32,11 @@ form {
 }
 
  // rules for .btn-favorite-resto (homepage)
- .btn-favorite-resto {
+.btn-favorite-resto {
     position: absolute;
     right: 10px;
     bottom: 20px;
- }
+}
 
 // rules for .btn-favorite-menu (menu's pages)
 .btn-favorite-menu {
@@ -54,24 +54,20 @@ form {
 
 //======================================================
 //button
-    //arrow back previous page
-    .btn.back-home {
-        @include btn-icon;
+//arrow back previous page
+.btn.back-home {
+    @include btn-icon;
+    position: absolute;
+    left: 6px;
+    top: 6px;
+
+    .fa-arrow-left {
         position: absolute;
-        left: 6px;
-        top: 6px;
+        @include center-icon;
+        font-size: 1.3rem;
+
         @include small-only {
-            left: 6px;
-            top: 6px;
-        }
-
-        .fa-arrow-left {
-            position: absolute;
-            @include center-icon;
-            font-size: 1.3rem;
-
-            @include small-only {
-            font-size: 2rem;
-            }
+        font-size: 2rem;
         }
     }
+}

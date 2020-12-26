@@ -1,8 +1,7 @@
  //bloc menu : starter, main course, dessert.
  
- .menu {
-    padding: 10px 15px 0 15px;
-    // position: relative;
+.menu {
+    padding: 10px 13px 0 13px;
 
     @include small-only {
         @include auto-center;

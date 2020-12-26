@@ -8,17 +8,15 @@
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-bottom: 25px;
+  padding: 10px 0 20px 10px;
 }
 
 .bloc-list-item, .instructions__list li {
   margin-left: auto;
   margin-right: auto;
   border: 1px solid #F6F6F6;
-  -webkit-box-shadow: #d9d9d9 0px 5px 5px 0px;
-          box-shadow: #d9d9d9 0px 5px 5px 0px;
+  -webkit-box-shadow: #d9d9d9 0px 5px 10px 0px;
+          box-shadow: #d9d9d9 0px 5px 10px 0px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -27,7 +25,7 @@
   display: -ms-flexbox;
   display: flex;
   font-size: 1rem;
-  height: 70px;
+  height: 73px;
   margin-bottom: 20px;
   max-width: 400px;
   padding-bottom: 0;
@@ -234,8 +232,8 @@
 
 @-webkit-keyframes slide-up {
   0% {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
     opacity: 0;
   }
   60% {
@@ -250,8 +248,8 @@
 
 @keyframes slide-up {
   0% {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
     opacity: 0;
   }
   60% {
@@ -660,7 +658,7 @@ form {
 form .order__button {
   border: none;
   border-radius: 25px;
-  padding: 15px;
+  padding: 16px;
   color: #FFFFFF;
   font-size: 1rem;
   margin-top: 15px;
@@ -668,7 +666,7 @@ form .order__button {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   cursor: pointer;
-  width: 190px;
+  width: 187px;
   margin-top: 8px;
   -webkit-transition-duration: 200ms;
           transition-duration: 200ms;
@@ -738,13 +736,6 @@ form .order__button:hover {
   position: absolute;
   left: 6px;
   top: 6px;
-}
-
-@media only screen and (min-width: 600px) {
-  .btn.back-home {
-    left: 6px;
-    top: 6px;
-  }
 }
 
 .btn.back-home .fa-arrow-left {
@@ -876,7 +867,7 @@ form .order__button:hover {
 }
 
 .jumbotron {
-  padding: 1.3rem 1.3rem;
+  padding: 1.7rem 1.3rem;
   text-align: center;
   background-color: #F6F6F6;
 }
@@ -894,7 +885,7 @@ form .order__button:hover {
 .jumbotron__button {
   border: none;
   border-radius: 25px;
-  padding: 15px;
+  padding: 16px;
   color: #FFFFFF;
   font-size: 1rem;
   margin-top: 15px;
@@ -913,7 +904,7 @@ form .order__button:hover {
 }
 
 section.instructions {
-  padding: 1.3rem 1.3rem;
+  padding: 1.7rem 1.3rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -928,7 +919,6 @@ section.instructions {
     width: 100%;
     max-width: 1175px;
     padding: 1.3rem 0;
-    padding-left: 0px;
   }
 }
 
@@ -1013,8 +1003,8 @@ section.instructions {
   overflow: hidden;
   position: relative;
   margin-bottom: 1.1rem;
-  -webkit-box-shadow: #d9d9d9 0px 5px 5px 0px;
-          box-shadow: #d9d9d9 0px 5px 5px 0px;
+  -webkit-box-shadow: #d9d9d9 0px 5px 10px 0px;
+          box-shadow: #d9d9d9 0px 5px 10px 0px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1075,8 +1065,8 @@ section.instructions {
   z-index: 2;
   border: 1px solid #99E2D0;
   background-color: #99E2D0;
-  top: 20px;
-  right: 20px;
+  top: 16px;
+  right: 16px;
   padding: 5px 10px;
   border-radius: 2px;
   font-size: 0.85rem;
@@ -1103,51 +1093,51 @@ section.instructions {
 .banner {
   background-color: #F6F6F6;
   width: 100%;
-  height: 310px;
+  height: 300px;
   position: relative;
 }
 
 @media only screen and (min-width: 600px) {
   .banner {
-    height: 350px;
+    height: 415px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .banner {
-    height: 430px;
+    height: 490px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .banner {
-    height: 500px;
+    height: 720px;
     max-width: none;
   }
 }
 
 .banner__img {
   width: 100%;
-  height: 300px;
+  height: 275px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 @media only screen and (min-width: 600px) {
   .banner__img {
-    height: 330px;
+    height: 400px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .banner__img {
-    height: 400px;
+    height: 480px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .banner__img {
-    height: 450px;
+    height: 680px;
     width: 100%;
   }
 }
@@ -1157,7 +1147,7 @@ section.instructions {
   position: absolute;
   bottom: 0;
   margin: 0;
-  padding: 30px 20px 12px;
+  padding: 35px 20px 12px;
   background-color: #F6F6F6;
   border-radius: 40px 40px 0 0;
   margin-left: auto;
@@ -1181,7 +1171,7 @@ section.instructions {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 1rem 3rem 0.8rem;
+    padding: 2rem 3rem 0.8rem;
   }
 }
 
@@ -1189,6 +1179,7 @@ section.instructions {
   .banner__heading {
     margin-left: auto;
     margin-right: auto;
+    padding: 3rem 3rem 0.8rem;
   }
 }
 
@@ -1223,8 +1214,8 @@ section.instructions {
   display: flex;
   background: #FFFFFF;
   border-radius: 15px;
-  -webkit-box-shadow: #d9d9d9 0px 5px 5px 0px;
-          box-shadow: #d9d9d9 0px 5px 5px 0px;
+  -webkit-box-shadow: #d9d9d9 0px 5px 10px 0px;
+          box-shadow: #d9d9d9 0px 5px 10px 0px;
   margin: 1rem auto;
   overflow: hidden;
   margin-left: auto;
@@ -1253,7 +1244,7 @@ section.instructions {
 .menu-list__item h3 {
   width: 83%;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   margin: 0;
   line-height: 25px;
 }
@@ -1331,7 +1322,7 @@ header img.header__brand-logo {
 
 .order {
   padding: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 55px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1348,7 +1339,7 @@ footer {
 }
 
 .footer-nav {
-  padding: 1.3rem 1.3rem;
+  padding: 25px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1364,7 +1355,7 @@ footer {
 }
 
 .footer-nav__logo {
-  padding-top: 5px;
+  padding-top: 0px;
   padding-bottom: 20px;
 }
 
@@ -1405,7 +1396,7 @@ footer {
 }
 
 .restaurants {
-  padding: 1.3rem 1.3rem;
+  padding: 1.7rem 1.3rem;
   background-color: #F6F6F6;
 }
 
@@ -1424,34 +1415,34 @@ footer {
 
 .restaurants__heading {
   width: 100%;
+  margin-top: 30px;
 }
 
 @media only screen and (min-width: 600px) {
   .restaurants__heading {
     text-align: center;
-    margin: 2rem auto;
+    margin: 2rem 0 auto;
   }
 }
 
 .restaurants__bloc {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
 }
 
 @media only screen and (min-width: 768px) {
   .restaurants__bloc {
-    padding-bottom: 30px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: auto;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 1.5rem 1.5rem;
+    margin: 1.5rem auto;
+    padding-bottom: 10px;
   }
 }
 
@@ -1464,7 +1455,7 @@ footer {
 }
 
 .menu {
-  padding: 10px 15px 0 15px;
+  padding: 10px 13px 0 13px;
 }
 
 @media only screen and (min-width: 600px) {

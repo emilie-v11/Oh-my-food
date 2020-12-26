@@ -6,10 +6,9 @@
     max-width: 500px;
     display: flex;
     background: $color-white;
-    border-radius: 15px; //20px ?
+    border-radius: 15px; //20px
     @include box-shadow;
     margin: 1rem auto;
-    // @include auto-center;
     overflow: hidden;
     @include auto-center;
 
@@ -24,35 +23,32 @@
     &__item {
         position: relative;
         width: 100%;
-        padding: 12px; // ajuster la taille
+        padding: 12px;
         overflow: hidden;
-        // text-overflow: ellipsis;
+
         & h3 {
             width: 83%; //82%
-            font-weight: 500; //600 ?
-            font-size: 1.1rem;
+            font-weight: 500;
+            font-size: 1.15rem;
             margin: 0;
             line-height: 25px;
         }
+
         & .description {
             font-size: 0.95rem; //1rem ?
-            // padding-right: 20px;
             width: 83%; //82%
-            // white-space: nowrap;
-            // overflow: hidden;
-            // text-overflow: ellipsis;
             margin: 0;
             line-height: 20px; //18px
-            font-weight: 300; //lighter ? 
+            font-weight: 300; 
         }
+        
         & .price {
-            // float: right;
             position: absolute;
             right: 20px;
             bottom: 10px;
             font-size: 0.9rem;
             font-weight: 700;
-            line-height: 20px; //18px
+            line-height: 20px;
             margin: 0;
         }
     }

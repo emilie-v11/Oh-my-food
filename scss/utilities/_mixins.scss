@@ -2,7 +2,8 @@
 //===========================================================================
 
 @mixin padding-bloc {
-    padding: 1.3rem 1.3rem;
+    // padding: 1.3rem 1.3rem;
+    padding: 1.7rem 1.3rem;
 }
 
 @mixin padding-element {
@@ -26,7 +27,8 @@
 }
 
 @mixin box-shadow {
-    box-shadow: $color-shadow-gray 0px 5px 5px 0px;
+    // box-shadow: $color-shadow-gray 0px 5px 5px 0px;
+    box-shadow: $color-shadow-gray 0px 5px 10px 0px;
 }
 
 //darken the shadow-box
@@ -49,17 +51,18 @@
     border: 1px solid $color;
 }
 
+//Base for button fa icon
 @mixin button-fa {
     margin: 0 1.5rem 0 .7rem;
     color: #7e7e7e;
     font-size: 1.2rem;
 }
 
-// base for main button
+// Base for Main Button
 @mixin button {
     border: none;
     border-radius: 25px;
-    padding: 15px;
+    padding: 16px;
     color: $color-white;
     font-size: 1rem;
     margin-top: 15px;
@@ -68,6 +71,7 @@
     cursor: pointer;
 }
 
+//Base for btn Icon
 @mixin btn-icon {
     background: transparent;
     border: 1px solid transparent;
@@ -78,6 +82,7 @@
     padding: 0;
 }
 
+//Base for Heart Icon
 @mixin heart {
     position: absolute;
     top: 0px;

@@ -1,6 +1,5 @@
 section.instructions {
     @include padding-bloc;
-    // padding-top: 30px;
 
     @include medium-only {
         display: flex;
@@ -8,7 +7,6 @@ section.instructions {
 	    width: 100%;
 	    max-width: 1175px;
 	    padding: 1.3rem 0;
-        padding-left: 0px;
     }
 }
 
@@ -43,7 +41,6 @@ section.instructions {
 
         @include large-only {
             max-width: 300px;
-
         }
 
         &:hover {
@@ -53,6 +50,7 @@ section.instructions {
                 color: $color-primary;
             }
         }
+
         & span {
             position: absolute;
             left: -12PX;
@@ -63,6 +61,7 @@ section.instructions {
             font-size: 0.8rem;
             color: $color-white;
         }
+
         i {
             @include button-fa;
             padding-left: 20px;

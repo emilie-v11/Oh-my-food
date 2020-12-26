@@ -7,8 +7,9 @@ $breakpoint-medium: 768px;
 //desktop
 $breakpoint-large: 1024px;
 
-
+//===================================================================================
 //Media Queries Mixins
+
 @mixin small-only {
     @media only screen and (min-width: $breakpoint-small) {
         @content;
@@ -27,5 +28,6 @@ $breakpoint-large: 1024px;
     }
 }
 
+//===================================================================================
 //variable for max-width of sections in the large version
 $max-width-sections: 1440px; //1200px

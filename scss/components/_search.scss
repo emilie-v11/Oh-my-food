@@ -1,16 +1,19 @@
+//Input for search by city
 .search {
-    // width: 100%;
     text-align: center;
     background-color: $color-gray;
     padding: 15px;
+
     &__icon {
         padding-left: 60px;
     }
+
     &__input {
         margin: 0px;
         padding-left: 10px;
         border: none;
         background-color: $color-gray;
+
         &::placeholder {
             outline: none;
             color: $color-dark-text;

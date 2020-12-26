@@ -10,24 +10,24 @@
 
     &__heading {
         width: 100%;
+        margin-top: 30px;
 
         @include small-only {
             text-align: center;
-            margin: 2rem auto;
+            margin: 2rem 0 auto;
         }
     }
 
     &__bloc {
-        padding-bottom: 30px;
+        padding-bottom: 20px;
         @include auto-center;
 
         @include medium-only {
-            padding-bottom: 30px;
             display: flex;
             flex-wrap: wrap;
-            margin: auto;
             justify-content: center;
-            margin: 1.5rem 1.5rem;
+            margin: 1.5rem auto;
+            padding-bottom: 10px;
         }
 
         @include large-only {
